@@ -1,0 +1,12 @@
+identifier: wind_controller/esp32c3
+name: LINDESTAD Wind Controller B.3
+type: mcu
+arch: riscv
+toolchain:
+  - zephyr
+supported:
+  - gpio
+  - pwm
+  - watchdog
+  - uart
+vendor: others

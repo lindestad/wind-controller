@@ -1,0 +1,6 @@
+board:
+  name: wind_controller
+  full_name: LINDESTAD Wind Controller B.3
+  vendor: others
+  socs:
+    - name: esp32c3

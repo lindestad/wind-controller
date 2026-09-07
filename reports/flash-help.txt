@@ -1,0 +1,49 @@
+-- west flash: rebuilding
+ninja: no work to do.
+build configuration:
+  build directory: C:/Users/danie/dev/wind-controller/build
+  board: wind_controller/esp32c3
+  runners.yaml: C:\Users\danie\dev\wind-controller\build\zephyr\runners.yaml
+esp32 capabilities:
+  RunnerCaps(commands={'flash'}, dev_id=False, mult_dev_ids=False, flash_addr=False, erase=True, reset=True, reset_types=False, reset_types_supported=None, extload=False, tool_opt=False, file=False, hide_load_files=False, rtt=False, dry_run=False, skip_load=False, batch_debug=False)
+esp32 options:
+  --elf-file FILE       path to zephyr.elf
+  --hex-file FILE       path to zephyr.hex
+  --bin-file FILE       path to zephyr.bin
+  --mot-file FILE       path to zephyr.mot
+  --erase, --no-erase   mass erase flash before loading, or don't. Default
+                        action depends on each specific runner.
+  --reset, --no-reset   reset device after flashing, or don't. Default action
+                        depends on each specific runner.
+  --esp-idf-path ESP_IDF_PATH
+                        path to ESP-IDF
+  --esp-boot-address ESP_BOOT_ADDRESS
+                        bootloader load address
+  --esp-partition-table-address ESP_PARTITION_TABLE_ADDRESS
+                        partition table load address
+  --esp-app-address ESP_APP_ADDRESS
+                        application load address
+  --esp-device ESP_DEVICE
+                        serial port to flash
+  --esp-baud-rate ESP_BAUD_RATE
+                        serial baud rate, default 921600
+  --esp-monitor-baud ESP_MONITOR_BAUD
+                        serial monitor baud rate, default 115200
+  --esp-flash-size ESP_FLASH_SIZE
+                        flash size, default "detect"
+  --esp-flash-freq ESP_FLASH_FREQ
+                        flash frequency, default "40m"
+  --esp-flash-mode ESP_FLASH_MODE
+                        flash mode, default "dio"
+  --esp-encrypt         Encrypt firmware while flashing (correct efuses
+                        required)
+  --esp-no-stub         Disable launching the flasher stub, only talk to ROM
+                        bootloader
+esp32 arguments from runners.yaml:
+  --esp-monitor-baud=
+  --esp-idf-path=C:/Users/danie/dev/wind-zephyr/modules/hal/espressif
+  --esp-app-address=0x0
+  --esp-flash-size=4MB
+  --esp-flash-freq=80m
+  --esp-flash-mode=dio
+  --esp-idf-path=C:/Users/danie/dev/wind-zephyr/modules/hal/espressif

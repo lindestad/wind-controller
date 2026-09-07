@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "tests": 19,
+  "failures": 0,
+  "errors": 0,
+  "parser_oracle_frames": 20000,
+  "random_events": 100000,
+  "scope": "Actual C host execution; no physical ESP32/fan timing or USB enumeration proved."
+}
