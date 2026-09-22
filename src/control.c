@@ -8,6 +8,7 @@ static void stop(struct wind_control *s, enum wind_mode mode)
     memset(&s->output, 0, sizeof(s->output));
     memset(s->target, 0, sizeof(s->target));
     memset(s->ready, 0, sizeof(s->ready));
+    s->no_tach_mask = 0;
     s->starting = -1;
     s->mode = mode;
 }
@@ -73,6 +74,7 @@ static void command(struct wind_control *s, uint16_t left, uint16_t right, uint3
         s->target[i] = i < 2 ? left : right;
         if (!s->target[i]) {
             s->ready[i] = false;
+            s->no_tach_mask &= (uint8_t)~(1U << i);
             s->output.demand[i] = 0;
             if (s->starting == (int)i) s->starting = -1;
         }
@@ -114,8 +116,15 @@ void wind_tick(struct wind_control *s, uint32_t now, const struct wind_tach tach
     }
     for (unsigned i = 0; i < WIND_FANS; ++i) {
         if (s->ready[i]) {
-            if (age(now, tach[i].last_ms) >= WIND_STALL_MS) {
-                wind_fault(s, false); return;
+            uint8_t bit = (uint8_t)(1U << i);
+            if (tach[i].count - s->tach_baseline[i] < 3U ||
+                age(now, tach[i].last_ms) >= WIND_STALL_MS) {
+                // Missing, stalled and disconnected tach look the same. Warn
+                // without interrupting airflow; require three NEW edges to clear.
+                if (!(s->no_tach_mask & bit)) s->tach_baseline[i] = tach[i].count;
+                s->no_tach_mask |= bit;
+            } else {
+                s->no_tach_mask &= (uint8_t)~bit;
             }
             s->output.demand[i] = s->target[i];
         }
@@ -123,12 +132,18 @@ void wind_tick(struct wind_control *s, uint32_t now, const struct wind_tach tach
     if (s->starting >= 0) {
         unsigned i = (unsigned)s->starting;
         uint32_t elapsed = age(now, s->fan_started);
-        if (elapsed >= WIND_START_TIMEOUT_MS) { wind_fault(s, false); return; }
         s->output.demand[i] = elapsed < WIND_KICK_MS ? 1000U : s->target[i];
         // Three filtered edges establish two intervals. Old edges cannot
         // qualify startup because the baseline is sampled when the kick starts.
-        if (elapsed < WIND_START_GAP_MS || tach[i].count - s->start_count < 3U ||
-            age(now, tach[i].last_ms) >= WIND_START_GAP_MS) return;
+        bool confirmed = elapsed >= WIND_START_GAP_MS &&
+                         tach[i].count - s->start_count >= 3U &&
+                         age(now, tach[i].last_ms) < WIND_START_GAP_MS;
+        if (!confirmed && elapsed < WIND_START_TIMEOUT_MS) return;
+        if (!confirmed) {
+            s->no_tach_mask |= (uint8_t)(1U << i);
+            s->tach_baseline[i] = tach[i].count;
+        }
+        // 'ready' means the startup attempt is complete, even without tach.
         s->ready[i] = true;
         s->starting = -1;
     }
@@ -137,10 +152,20 @@ void wind_tick(struct wind_control *s, uint32_t now, const struct wind_tach tach
             s->starting = (int)i;
             s->fan_started = now;
             s->start_count = tach[i].count;
+            s->tach_baseline[i] = tach[i].count;
             s->output.demand[i] = 1000U;
             return;
         }
     }
+}
+
+void wind_status(const struct wind_control *s, unsigned char out[WIND_STATUS_BYTES])
+{
+    // Versioned, fixed-size ASCII snapshot, one hexadecimal warning-mask digit.
+    static const unsigned char hex[] = "0123456789ABCDEF";
+    memcpy(out, "S,1,0,0\n", WIND_STATUS_BYTES);
+    out[4] = (unsigned char)('0' + s->mode);
+    out[6] = hex[s->no_tach_mask & 15U];
 }
 
 uint32_t wind_gate_ns(uint16_t demand)

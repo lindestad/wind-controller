@@ -20,7 +20,7 @@ checks=[]
 def check(name,ok):
     assert ok,name
     checks.append(name)
-for option in ['SOC_ESP32C3_WROOM_02_N4','GPIO','PWM','WATCHDOG','SERIAL_ESP32_USB']:
+for option in ['SOC_ESP32C3_WROOM_02_N4','GPIO','PWM','WATCHDOG','SERIAL_ESP32_USB','UART_INTERRUPT_DRIVEN']:
     check(option,config.get('CONFIG_'+option)=='y')
 for option in ['CONSOLE','UART_CONSOLE','PRINTK','LOG','BOOT_BANNER','WIFI','BT','NETWORKING','PM','PM_DEVICE']:
     check(option+' disabled',config.get('CONFIG_'+option,'n')=='n')

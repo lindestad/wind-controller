@@ -21,6 +21,33 @@ static const struct device *const usb = DEVICE_DT_GET(DT_NODELABEL(usb_serial));
 static const struct device *const watchdog = DEVICE_DT_GET(DT_NODELABEL(wdt0));
 static struct gpio_callback tach_cb;
 static volatile struct wind_tach tach[WIND_FANS];
+static unsigned char status_frame[WIND_STATUS_BYTES];
+static unsigned status_sent = WIND_STATUS_BYTES;
+
+static void status_irq(const struct device *dev, void *context)
+{
+    ARG_UNUSED(context);
+    if (!uart_irq_update(dev) || !uart_irq_tx_ready(dev)) return;
+    if (status_sent < WIND_STATUS_BYTES) {
+        int sent = uart_fifo_fill(dev, status_frame + status_sent,
+                                 (int)(WIND_STATUS_BYTES - status_sent));
+        if (sent > 0) status_sent += (unsigned)sent;
+    }
+    if (status_sent == WIND_STATUS_BYTES) uart_irq_tx_disable(dev);
+}
+
+static void publish_status(const struct wind_control *state)
+{
+    // Keep at most one pending snapshot. Never wait for a host to read USB:
+    // blocking poll_out can delay command expiry when USB is backpressured.
+    unsigned key = irq_lock();
+    if (status_sent == WIND_STATUS_BYTES) {
+        wind_status(state, status_frame);
+        status_sent = 0;
+        uart_irq_tx_enable(usb);
+    }
+    irq_unlock(key);
+}
 
 static void tach_edge(const struct device *dev, struct gpio_callback *cb, uint32_t pins)
 {
@@ -55,6 +82,7 @@ int main(void)
     if (!device_is_ready(usb) || !device_is_ready(watchdog)) return 2;
     for (unsigned i = 0; i < WIND_FANS; ++i) if (!pwm_is_ready_dt(&pwm[i])) return 3;
     if (wind_apply(&state.output, &io)) return 4;
+    if (uart_irq_callback_user_data_set(usb, status_irq, NULL)) return 12;
     if (!gpio_is_ready_dt(&status) || gpio_pin_configure_dt(&status, GPIO_OUTPUT_INACTIVE)) return 5;
     uint32_t mask = 0;
     for (unsigned i = 0; i < WIND_FANS; ++i) {
@@ -76,6 +104,7 @@ int main(void)
     unsigned discarded = 0;
     while (discarded < 256U && !uart_poll_in(usb, &byte)) discarded++;
     if (discarded == 256U) wind_fault(&state, true);
+    uint32_t last_status = k_uptime_get_32() - WIND_STATUS_MS;
     for (;;) {
         struct wind_tach snapshot[WIND_FANS];
         unsigned key = irq_lock();
@@ -95,6 +124,11 @@ int main(void)
             return 10; // no watchdog feed after an actuator failure
         }
         (void)gpio_pin_set_dt(&status, state.output.enable);
+        now = k_uptime_get_32();
+        if (now - last_status >= WIND_STATUS_MS) {
+            publish_status(&state);
+            last_status = now;
+        }
         if (wdt_feed(watchdog, channel)) {
             struct wind_output stopped = {0};
             (void)wind_apply(&stopped, &io);

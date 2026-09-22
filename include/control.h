@@ -14,6 +14,8 @@
 #define WIND_STALL_MS 2000U
 #define WIND_MIN_DEMAND 50U
 #define WIND_FRAME_MAX 11U
+#define WIND_STATUS_BYTES 8U
+#define WIND_STATUS_MS 500U
 
 enum wind_mode { WIND_OFF, WIND_PRECHARGE, WIND_ACTIVE, WIND_STALE, WIND_FAULT };
 struct wind_tach { uint32_t count, last_ms; };
@@ -23,6 +25,8 @@ struct wind_control {
     struct wind_output output;
     uint16_t target[WIND_FANS];
     bool ready[WIND_FANS], discard, hard_fault;
+    uint8_t no_tach_mask;
+    uint32_t tach_baseline[WIND_FANS];
     int starting;
     uint32_t last_valid, power_started, fan_started, start_count;
     uint32_t partial_started, accepted, rejected;
@@ -34,6 +38,7 @@ void wind_tick(struct wind_control *s, uint32_t now, const struct wind_tach tach
 void wind_byte(struct wind_control *s, unsigned char byte, uint32_t now);
 void wind_fault(struct wind_control *s, bool hard);
 uint32_t wind_gate_ns(uint16_t demand);
+void wind_status(const struct wind_control *s, unsigned char out[WIND_STATUS_BYTES]);
 
 struct wind_io {
     void *context;

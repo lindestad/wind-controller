@@ -1,5 +1,20 @@
 # Pre-order firmware verification
 
+## 22 September 2026 update: optional fans and USB warnings
+
+The current firmware supersedes the original tach-fault shutdown behaviour described in the historical pre-order results below. Startup without tach and tach loss now set per-header warnings while all commanded outputs continue. The next header starts after either confirmed tach plus 500 ms, or a 2 s timeout. Zero through four connected fans are supported. Command loss, RX-budget exhaustion, actuator failure and the existing hardware power protections are unchanged.
+
+- 25 actual-C host tests PASS, covering all 16 populations of connected fans; no-tach startup progression; one running fan losing tach; three-edge warning recovery; side stop/restart; timer wrap; status encoding; command expiry and hard faults while warnings are present. The original parser/random-traffic/output tests remain included.
+- Zephyr target build PASS, 43 configuration/pin/image checks PASS; image size 133,876 bytes. Added interrupt-driven USB TX so status reports do not use blocking character writes in the control loop.
+- Flashed on COM4 using the generated Zephyr runner; esptool verified the flash hash (`reports/warning-firmware-flash.log`). No eFuse/security settings were changed.
+- Actual-board USB test PASS with **12 V physically disconnected**: repeated OFF reports, precharge, sequential warning masks 1/3/7/F while remaining ACTIVE, command-timeout state, then explicit OFF. Evidence: `reports/warning-usb-smoke.json`; rerun with `tests/usb_smoke.py --port COM4 --no-fan-power` only after physically disconnecting the barrel supply. This tests actual application execution/USB but cannot prove fan voltage, motor rotation or electrical timing.
+- The complete stop-before-flash helper was exercised against the board: repeated OFF snapshots for two seconds, successful hash-verified flashing, automatic reset, and OFF reports afterwards (`reports/stop-first-flash.log`). OFF telemetry describes requested outputs; it cannot measure whether the capacitors are discharged. This test used USB only; flashing with 12 V attached has not been physically tested.
+- Before this update, the user confirmed that the original firmware started and stopped a single L1 fan during a two-second command test. A sustained two-fan test of the new warning behaviour is still pending.
+
+Remaining checks include real tach warning/recovery with powered motors, both sides, measured output timing and watchdog reset, prolonged USB TX backpressure, current/thermal behaviour and SimHub end-to-end integration. A successful USB status test does not close those items. Routine flashing with the normal 12 V supply connected does not introduce a separate electrical damage or permanent-bricking mechanism; USB supplies the MCU, and ROM download recovery remains enabled. Supply faults and USB interruption are separate from fan motion; an interrupted write normally needs reflashing.
+
+## Historical pre-order results
+
 7 September 2026, WindPCB B.3. **Software feasibility checks PASS.** These establish a buildable implementation for the existing pins, not physical operation of unmanufactured hardware.
 
 - Clean target build: Zephyr v4.4.2, commit `dccb09599635bdff17633fa7e9dab014b91dce90`, SDK 1.0.1 / RISC-V GCC 14.3.0, Python 3.12.10, west 1.5.0, esptool 5.4.0.

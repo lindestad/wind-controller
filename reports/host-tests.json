@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "tests": 19,
+  "tests": 25,
   "failures": 0,
   "errors": 0,
   "parser_oracle_frames": 20000,

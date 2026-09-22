@@ -1,0 +1,132 @@
+{
+  "time": "2026-09-22T11:47:39.496835+02:00",
+  "port": "COM4",
+  "supply": "12 V disconnected by user; no motor movement test",
+  "phases": {
+    "idle": [
+      {
+        "elapsed": 0.297,
+        "frame": "S,1,0,0"
+      },
+      {
+        "elapsed": 0.812,
+        "frame": "S,1,0,0"
+      },
+      {
+        "elapsed": 1.312,
+        "frame": "S,1,0,0"
+      },
+      {
+        "elapsed": 1.797,
+        "frame": "S,1,0,0"
+      }
+    ],
+    "all_headers_no_tach": [
+      {
+        "elapsed": 0.312,
+        "frame": "S,1,1,0"
+      },
+      {
+        "elapsed": 0.812,
+        "frame": "S,1,2,0"
+      },
+      {
+        "elapsed": 1.312,
+        "frame": "S,1,2,0"
+      },
+      {
+        "elapsed": 1.812,
+        "frame": "S,1,2,0"
+      },
+      {
+        "elapsed": 2.328,
+        "frame": "S,1,2,0"
+      },
+      {
+        "elapsed": 2.828,
+        "frame": "S,1,2,1"
+      },
+      {
+        "elapsed": 3.328,
+        "frame": "S,1,2,1"
+      },
+      {
+        "elapsed": 3.844,
+        "frame": "S,1,2,1"
+      },
+      {
+        "elapsed": 4.344,
+        "frame": "S,1,2,1"
+      },
+      {
+        "elapsed": 4.844,
+        "frame": "S,1,2,3"
+      },
+      {
+        "elapsed": 5.344,
+        "frame": "S,1,2,3"
+      },
+      {
+        "elapsed": 5.859,
+        "frame": "S,1,2,3"
+      },
+      {
+        "elapsed": 6.359,
+        "frame": "S,1,2,3"
+      },
+      {
+        "elapsed": 6.859,
+        "frame": "S,1,2,7"
+      },
+      {
+        "elapsed": 7.375,
+        "frame": "S,1,2,7"
+      },
+      {
+        "elapsed": 7.875,
+        "frame": "S,1,2,7"
+      },
+      {
+        "elapsed": 8.375,
+        "frame": "S,1,2,7"
+      },
+      {
+        "elapsed": 8.875,
+        "frame": "S,1,2,F"
+      },
+      {
+        "elapsed": 9.375,
+        "frame": "S,1,2,F"
+      },
+      {
+        "elapsed": 9.891,
+        "frame": "S,1,2,F"
+      }
+    ],
+    "command_timeout": [
+      {
+        "elapsed": 0.391,
+        "frame": "S,1,2,F"
+      },
+      {
+        "elapsed": 0.891,
+        "frame": "S,1,3,0"
+      },
+      {
+        "elapsed": 1.406,
+        "frame": "S,1,3,0"
+      }
+    ],
+    "explicit_stop": [
+      {
+        "elapsed": 0.406,
+        "frame": "S,1,0,0"
+      },
+      {
+        "elapsed": 0.906,
+        "frame": "S,1,0,0"
+      }
+    ]
+  },
+  "status": "PASS"
+}

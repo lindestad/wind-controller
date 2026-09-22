@@ -23,6 +23,7 @@ for name, argc in [('host_init',1),('host_byte',2),('host_tick',1),('host_edge',
                    ('host_demand',1),('host_target',1),('host_fault',1)]:
     getattr(lib,name).argtypes = [C.c_uint32]*argc
 lib.host_starting.restype = C.c_int
+lib.host_status.argtypes = [C.POINTER(C.c_ubyte)]
 
 def frame(left=600, right=700, now=0):
     raw = f'W,{left},{right}\n'.encode()
@@ -33,13 +34,13 @@ def feed(raw, now=0):
 
 def outputs(): return [lib.host_demand(i) for i in range(4)]
 
-def run_until(end, start=0, left=600, right=700, tach=True, origin=0):
+def run_until(end, start=0, left=600, right=700, tach=True, origin=0, present=15):
     for elapsed in range(start,end+1,10):
         now=(origin+elapsed)&0xffffffff
         if elapsed%100==0: frame(left,right,now)
         if tach and elapsed%20==0:
             for i,demand in enumerate(outputs()):
-                if demand: lib.host_edge(i,now)
+                if demand and present & (1 << i): lib.host_edge(i,now)
         lib.host_tick(now)
 
 class ControlTests(unittest.TestCase):
@@ -66,14 +67,68 @@ class ControlTests(unittest.TestCase):
         self.assertEqual(first,[750,1250,1750,2250])
         self.assertEqual(outputs(),[600,600,700,700])
 
-    def test_no_tach_latches_fault_and_never_retries(self):
+    def test_no_tach_warns_and_advances_without_repeated_kicks(self):
         run_until(2750,tach=False)
-        self.assertEqual(lib.host_mode(),4); self.assertFalse(lib.host_enable())
-        run_until(7000,2760,tach=False)
-        self.assertEqual(lib.host_mode(),4); self.assertFalse(lib.host_enable())
-        frame(0,0,7010); self.assertEqual(lib.host_mode(),0)
-        frame(500,0,7020); lib.host_tick(7020)
-        self.assertTrue(lib.host_enable()); self.assertEqual(outputs(),[0]*4)
+        self.assertEqual(lib.host_mode(),2); self.assertTrue(lib.host_enable())
+        self.assertEqual(lib.host_warnings(),1)
+        self.assertEqual(outputs(),[600,1000,0,0])
+        run_until(15000,2760,tach=False)
+        self.assertEqual(lib.host_warnings(),15)
+        self.assertEqual(outputs(),[600,600,700,700])
+        self.assertEqual(lib.host_starting(),-1)
+
+    def test_all_sixteen_fan_populations(self):
+        for present in range(16):
+            with self.subTest(present=present):
+                lib.host_init(0)
+                run_until(10000,present=present)
+                self.assertEqual(lib.host_mode(),2)
+                self.assertTrue(lib.host_enable())
+                self.assertEqual(outputs(),[600,600,700,700])
+                self.assertEqual(lib.host_warnings(),15 ^ present)
+
+    def test_warning_clears_only_after_three_new_edges(self):
+        run_until(4000,left=600,right=0,present=1)
+        self.assertEqual(lib.host_warnings(),2)
+        lib.host_edge(1,4010); lib.host_tick(4010)
+        lib.host_edge(1,4020); lib.host_tick(4020)
+        self.assertEqual(lib.host_warnings(),2)
+        lib.host_edge(1,4030); lib.host_tick(4030)
+        self.assertEqual(lib.host_warnings(),0)
+        self.assertEqual(outputs(),[600,600,0,0])
+
+    def test_warning_clears_on_side_stop_and_rechecks_on_restart(self):
+        run_until(10000,present=1)
+        self.assertEqual(lib.host_warnings(),14)
+        frame(0,700,10010); lib.host_tick(10010)
+        self.assertEqual(lib.host_warnings(),12)
+        frame(600,700,10020); lib.host_tick(10020)
+        self.assertEqual(outputs()[0],1000)
+        run_until(15000,10030,present=1)
+        self.assertEqual(lib.host_warnings(),14)
+        frame(0,0,15010)
+        self.assertEqual(lib.host_warnings(),0)
+        self.assertFalse(lib.host_enable())
+
+    def test_warning_does_not_bypass_command_timeout_or_hard_fault(self):
+        run_until(10000,tach=False)
+        lib.host_tick(10500)
+        self.assertEqual(lib.host_mode(),3)
+        self.assertEqual(outputs(),[0]*4)
+        self.assertEqual(lib.host_warnings(),0)
+        frame(500,500,10510); lib.host_fault(1)
+        self.assertEqual(lib.host_mode(),4)
+        self.assertFalse(lib.host_enable())
+
+    def test_status_protocol_reports_mode_and_warning_mask(self):
+        out=(C.c_ubyte*8)()
+        lib.host_status(out); self.assertEqual(bytes(out),b'S,1,0,0\n')
+        run_until(10000,present=5)
+        lib.host_status(out); self.assertEqual(bytes(out),b'S,1,2,A\n')
+        lib.host_tick(10500)
+        lib.host_status(out); self.assertEqual(bytes(out),b'S,1,3,0\n')
+        lib.host_fault(1)
+        lib.host_status(out); self.assertEqual(bytes(out),b'S,1,4,0\n')
 
     def test_two_edges_are_not_two_periods(self):
         run_until(750,tach=False)
@@ -119,8 +174,22 @@ class ControlTests(unittest.TestCase):
 
     def test_stall_after_successful_start(self):
         run_until(3000)
-        run_until(5000,3010,tach=False)
-        self.assertEqual(lib.host_mode(),4); self.assertEqual(outputs(),[0]*4)
+        run_until(5000,3010,present=13)
+        self.assertEqual(lib.host_mode(),2); self.assertEqual(outputs(),[600,600,700,700])
+        self.assertEqual(lib.host_warnings(),2)
+        lib.host_edge(1,5010); lib.host_tick(5010)
+        lib.host_edge(1,5020); lib.host_tick(5020)
+        self.assertEqual(lib.host_warnings(),2)
+        lib.host_edge(1,5030); lib.host_tick(5030)
+        self.assertEqual(lib.host_warnings(),0)
+
+    def test_warning_and_recovery_across_time_wrap(self):
+        origin=0xfffff000
+        lib.host_init(origin)
+        run_until(10000,origin=origin,present=5)
+        self.assertEqual(lib.host_warnings(),10)
+        run_until(10100,10010,origin=origin,present=15)
+        self.assertEqual(lib.host_warnings(),0)
 
     def test_time_wrap_during_staging(self):
         origin=0xffffff00

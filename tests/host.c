@@ -13,6 +13,8 @@ unsigned host_target(unsigned i) { assert(i<4); return s.target[i]; }
 unsigned host_enable(void) { return s.output.enable; }
 unsigned host_accepted(void) { return s.accepted; }
 unsigned host_mode(void) { return s.mode; }
+unsigned host_warnings(void) { return s.no_tach_mask; }
+void host_status(unsigned char *out) { wind_status(&s, out); }
 int host_starting(void) { return s.starting; }
 void host_fault(unsigned hard) { wind_fault(&s, hard != 0); }
 

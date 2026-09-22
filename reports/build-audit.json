@@ -6,6 +6,7 @@
     "PWM",
     "WATCHDOG",
     "SERIAL_ESP32_USB",
+    "UART_INTERRUPT_DRIVEN",
     "CONSOLE disabled",
     "UART_CONSOLE disabled",
     "PRINTK disabled",
@@ -47,12 +48,12 @@
   "zephyr_commit": "dccb09599635bdff17633fa7e9dab014b91dce90",
   "sdk": "1.0.1",
   "board": "wind_controller/esp32c3",
-  "application_bytes": 133780,
+  "application_bytes": 133876,
   "hardware_data_sha256": "7d92aecd7f26bbdb8a18cfe87e7b4a6b004ff39f5d33d4f16255b2af62f23b33",
   "artifacts": {
-    "build\\zephyr\\zephyr.elf": "0878ce521e0c1d37749b528dadd6183fc2c1966e87b4812c79de00330880d8f5",
-    "build\\zephyr\\zephyr.bin": "7a26ffca246b92aa85bf9e41e0cf05dd38539ec48c84447b2833ce957dbd8851",
-    "build\\zephyr\\.config": "3ebd00c1f8231e95819aa42fd68a0a39cd0d80547ef96efa20e7e256a9bc4342",
+    "build\\zephyr\\zephyr.elf": "04e078cc2076f28d821af86860bec12c64795abef295f9a42294af229d00ce7d",
+    "build\\zephyr\\zephyr.bin": "08dcbe51dd179d671ae5545513d0c2a0ee394d0e86cd532974feb1f674014c94",
+    "build\\zephyr\\.config": "82fbc5d4f11ff95d267dedd6a49ce648667fbe628e3452926878a6cebc5e1ca1",
     "build\\zephyr\\zephyr.dts": "992ce48aedec87ebd61f3660f78a79158b2949a08499456ed763410ba269c497"
   },
   "limitations": [
