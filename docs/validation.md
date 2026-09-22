@@ -13,6 +13,10 @@ The current firmware supersedes the original tach-fault shutdown behaviour descr
 
 Remaining checks include real tach warning/recovery with powered motors, both sides, measured output timing and watchdog reset, prolonged USB TX backpressure, current/thermal behaviour and SimHub end-to-end integration. A successful USB status test does not close those items. Routine flashing with the normal 12 V supply connected does not introduce a separate electrical damage or permanent-bricking mechanism; USB supplies the MCU, and ROM download recovery remains enabled. Supply faults and USB interruption are separate from fan motion; an interrupted write normally needs reflashing.
 
+### RPM integration update, 22 September
+
+Added one-second T2 telemetry (per-header estimated RPM/output, uptime, command counters). RPM computation uses actual window duration and 64-bit arithmetic; output formatting is bounded. The existing S1 status frames are retained and the stop-first flash helper ignores T2 records. 26 host tests and 43 target checks PASS. Firmware was hash-verified when flashed with 12 V connected, and actual COM4 idle telemetry returned valid 15-field T2 frames (`reports/rpm-usb-idle.json`). Rig Companion's live smoke test subsequently passed telemetry, SimHub heartbeat, zero requested output, release/reconnect and shutdown. This update does not claim independently measured RPM accuracy or a powered vehicle-speed test.
+
 ## Historical pre-order results
 
 7 September 2026, WindPCB B.3. **Software feasibility checks PASS.** These establish a buildable implementation for the existing pins, not physical operation of unmanufactured hardware.

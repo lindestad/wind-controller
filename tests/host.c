@@ -15,6 +15,11 @@ unsigned host_accepted(void) { return s.accepted; }
 unsigned host_mode(void) { return s.mode; }
 unsigned host_warnings(void) { return s.no_tach_mask; }
 void host_status(unsigned char *out) { wind_status(&s, out); }
+unsigned host_rpm(unsigned count, unsigned elapsed) { return wind_rpm(count, elapsed); }
+unsigned host_telemetry(unsigned char *out, unsigned capacity) {
+    uint32_t rpm[4] = {0, 1200, 1500, 3000};
+    return wind_telemetry(&s, rpm, 123456, out, capacity);
+}
 int host_starting(void) { return s.starting; }
 void host_fault(unsigned hard) { wind_fault(&s, hard != 0); }
 

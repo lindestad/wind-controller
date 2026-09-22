@@ -24,6 +24,8 @@ for name, argc in [('host_init',1),('host_byte',2),('host_tick',1),('host_edge',
     getattr(lib,name).argtypes = [C.c_uint32]*argc
 lib.host_starting.restype = C.c_int
 lib.host_status.argtypes = [C.POINTER(C.c_ubyte)]
+lib.host_telemetry.argtypes = [C.POINTER(C.c_ubyte), C.c_uint32]
+lib.host_rpm.argtypes = [C.c_uint32, C.c_uint32]
 
 def frame(left=600, right=700, now=0):
     raw = f'W,{left},{right}\n'.encode()
@@ -129,6 +131,17 @@ class ControlTests(unittest.TestCase):
         lib.host_status(out); self.assertEqual(bytes(out),b'S,1,3,0\n')
         lib.host_fault(1)
         lib.host_status(out); self.assertEqual(bytes(out),b'S,1,4,0\n')
+
+    def test_rpm_window_and_telemetry(self):
+        self.assertEqual(lib.host_rpm(100,1000),3000)
+        self.assertEqual(lib.host_rpm(101,1010),3000)
+        self.assertEqual(lib.host_rpm(0,1000),0)
+        self.assertEqual(lib.host_rpm(100,0),0)
+        self.assertEqual(lib.host_rpm(0xffffffff,1),30000)
+        out=(C.c_ubyte*128)()
+        size=lib.host_telemetry(out,128)
+        self.assertEqual(bytes(out[:size]), b'T,2,0,0,123456,0,0,0,1200,1500,3000,0,0,0,0\n')
+        self.assertEqual(lib.host_telemetry(out,8),0)
 
     def test_two_edges_are_not_two_periods(self):
         run_until(750,tach=False)

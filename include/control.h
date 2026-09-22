@@ -16,6 +16,7 @@
 #define WIND_FRAME_MAX 11U
 #define WIND_STATUS_BYTES 8U
 #define WIND_STATUS_MS 500U
+#define WIND_TELEMETRY_BYTES 128U
 
 enum wind_mode { WIND_OFF, WIND_PRECHARGE, WIND_ACTIVE, WIND_STALE, WIND_FAULT };
 struct wind_tach { uint32_t count, last_ms; };
@@ -39,6 +40,9 @@ void wind_byte(struct wind_control *s, unsigned char byte, uint32_t now);
 void wind_fault(struct wind_control *s, bool hard);
 uint32_t wind_gate_ns(uint16_t demand);
 void wind_status(const struct wind_control *s, unsigned char out[WIND_STATUS_BYTES]);
+uint32_t wind_rpm(uint32_t edges, uint32_t elapsed_ms);
+unsigned wind_telemetry(const struct wind_control *s, const uint32_t rpm[WIND_FANS],
+                        uint32_t now, unsigned char *out, unsigned capacity);
 
 struct wind_io {
     void *context;

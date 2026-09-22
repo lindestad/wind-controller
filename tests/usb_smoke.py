@@ -41,7 +41,7 @@ def phase(name, seconds, command):
             frames.append({'elapsed': round(time.monotonic() - start, 3),
                            'frame': line.decode('ascii', errors='replace')})
         assert len(pending) <= 128, 'Unframed serial output'
-    return [entry['frame'] for entry in frames]
+    return [entry['frame'] for entry in frames if entry['frame'].startswith('S,1,')]
 
 
 try:

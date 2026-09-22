@@ -1,5 +1,6 @@
 #include "control.h"
 #include <string.h>
+#include <stdio.h>
 
 static uint32_t age(uint32_t now, uint32_t then) { return now - then; }
 
@@ -172,4 +173,26 @@ uint32_t wind_gate_ns(uint16_t demand)
 {
     if (demand > 1000U) return WIND_PERIOD_NS; // invalid output fails stopped
     return (1000U - demand) * (WIND_PERIOD_NS / 1000U);
+}
+
+uint32_t wind_rpm(uint32_t edges, uint32_t elapsed_ms)
+{
+    // Two tach pulses per revolution; estimate from a one-second edge window.
+    if (!elapsed_ms) return 0;
+    uint64_t rpm = (uint64_t)edges * 30000U / elapsed_ms;
+    return rpm > 30000U ? 30000U : (uint32_t)rpm;
+}
+
+unsigned wind_telemetry(const struct wind_control *s, const uint32_t rpm[WIND_FANS],
+                        uint32_t now, unsigned char *out, unsigned capacity)
+{
+    int size = snprintf((char *)out, capacity,
+        "T,2,%u,%X,%lu,%lu,%lu,%lu,%lu,%lu,%lu,%u,%u,%u,%u\n",
+        (unsigned)s->mode, (unsigned)s->no_tach_mask,
+        (unsigned long)now, (unsigned long)s->accepted, (unsigned long)s->rejected,
+        (unsigned long)rpm[0], (unsigned long)rpm[1],
+        (unsigned long)rpm[2], (unsigned long)rpm[3],
+        (unsigned)s->output.demand[0], (unsigned)s->output.demand[1],
+        (unsigned)s->output.demand[2], (unsigned)s->output.demand[3]);
+    return size > 0 && (unsigned)size < capacity ? (unsigned)size : 0U;
 }

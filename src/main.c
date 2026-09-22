@@ -5,6 +5,7 @@
 #include <zephyr/drivers/pwm.h>
 #include <zephyr/drivers/uart.h>
 #include <zephyr/drivers/watchdog.h>
+#include <string.h>
 
 #define USER DT_PATH(zephyr_user)
 static const struct gpio_dt_spec enable = GPIO_DT_SPEC_GET(USER, fan_enable_gpios);
@@ -21,28 +22,29 @@ static const struct device *const usb = DEVICE_DT_GET(DT_NODELABEL(usb_serial));
 static const struct device *const watchdog = DEVICE_DT_GET(DT_NODELABEL(wdt0));
 static struct gpio_callback tach_cb;
 static volatile struct wind_tach tach[WIND_FANS];
-static unsigned char status_frame[WIND_STATUS_BYTES];
-static unsigned status_sent = WIND_STATUS_BYTES;
+static unsigned char status_frame[WIND_TELEMETRY_BYTES];
+static unsigned status_sent, status_size;
 
 static void status_irq(const struct device *dev, void *context)
 {
     ARG_UNUSED(context);
     if (!uart_irq_update(dev) || !uart_irq_tx_ready(dev)) return;
-    if (status_sent < WIND_STATUS_BYTES) {
+    if (status_sent < status_size) {
         int sent = uart_fifo_fill(dev, status_frame + status_sent,
-                                 (int)(WIND_STATUS_BYTES - status_sent));
+                                 (int)(status_size - status_sent));
         if (sent > 0) status_sent += (unsigned)sent;
     }
-    if (status_sent == WIND_STATUS_BYTES) uart_irq_tx_disable(dev);
+    if (status_sent == status_size) uart_irq_tx_disable(dev);
 }
 
-static void publish_status(const struct wind_control *state)
+static void publish_status(const unsigned char *frame, unsigned size)
 {
     // Keep at most one pending snapshot. Never wait for a host to read USB:
     // blocking poll_out can delay command expiry when USB is backpressured.
     unsigned key = irq_lock();
-    if (status_sent == WIND_STATUS_BYTES) {
-        wind_status(state, status_frame);
+    if (status_sent == status_size) {
+        memcpy(status_frame, frame, size);
+        status_size = size;
         status_sent = 0;
         uart_irq_tx_enable(usb);
     }
@@ -105,6 +107,8 @@ int main(void)
     while (discarded < 256U && !uart_poll_in(usb, &byte)) discarded++;
     if (discarded == 256U) wind_fault(&state, true);
     uint32_t last_status = k_uptime_get_32() - WIND_STATUS_MS;
+    uint32_t last_rpm = k_uptime_get_32();
+    uint32_t prior_count[WIND_FANS] = {0}, rpm[WIND_FANS] = {0};
     for (;;) {
         struct wind_tach snapshot[WIND_FANS];
         unsigned key = irq_lock();
@@ -126,7 +130,19 @@ int main(void)
         (void)gpio_pin_set_dt(&status, state.output.enable);
         now = k_uptime_get_32();
         if (now - last_status >= WIND_STATUS_MS) {
-            publish_status(&state);
+            unsigned char frame[WIND_TELEMETRY_BYTES];
+            wind_status(&state, frame);
+            unsigned size = WIND_STATUS_BYTES;
+            if (now - last_rpm >= 1000U) {
+                for (unsigned i = 0; i < WIND_FANS; ++i) {
+                    rpm[i] = wind_rpm(snapshot[i].count - prior_count[i], now - last_rpm);
+                    prior_count[i] = snapshot[i].count;
+                }
+                last_rpm = now;
+                size += wind_telemetry(&state, rpm, now, frame + size,
+                                       (unsigned)sizeof(frame) - size);
+            }
+            publish_status(frame, size);
             last_status = now;
         }
         if (wdt_feed(watchdog, channel)) {

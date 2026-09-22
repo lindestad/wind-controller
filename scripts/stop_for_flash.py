@@ -40,7 +40,7 @@ def prepare(port_name):
                         idle_since = time.monotonic()
                     last_idle = time.monotonic()
                     idle_reports += 1
-                else:
+                elif not line.startswith(b'T,2,'):
                     idle_since = last_idle = None
                     idle_reports = 0
             if len(pending) > 128:

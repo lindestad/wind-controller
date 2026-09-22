@@ -33,6 +33,10 @@ Status transmission uses a bounded interrupt-driven buffer; a host that stops re
 
 Only valid complete demand frames refresh the 500 ms command deadline. Overlong, malformed and partial frames are rejected. RX-budget saturation and output failures still stop operation and require reset; warnings do not bypass these protections. Commanded stop sets all PWM inputs low before removing fan power. Abrupt USB loss/reset can still cause the documented brief capacitor-powered twitch/coasting.
 
+## Extended telemetry
+
+Extended telemetry is also sent about once per second: `T,2,<mode>,<warning_hex>,<uptime_ms>,<accepted>,<rejected>,<rpm_L1>,<rpm_L2>,<rpm_R1>,<rpm_R2>,<pwm_L1>,<pwm_L2>,<pwm_R1>,<pwm_R2>\n`. RPM uses edge-count differences over the actual sample interval and assumes two pulses per revolution; absolute accuracy needs independent measurement. PWM values are per-header 0–1000 output demands including startup kicks. No supply voltage/current/temperature measurement exists. The existing S1 reports remain unchanged; consumers should ignore recognized additional report types. Rig Companion now owns USB and receives SimHub vehicle speed through its localhost bridge; see `C:\Users\danie\dev\rig-companion\docs\wind-simulator.md`.
+
 ## Routine firmware updates
 
 After building, close SimHub/other serial programs and run `./scripts/flash.ps1 -Port COM4` (substitute the current port). The helper sends stop commands, requires repeated OFF reports for two seconds, then invokes the generated Zephyr flash runner. It aborts if it cannot confirm OFF. Firmware starts with fan power disabled and needs a new valid demand before running. Never resume the command sender during flashing.

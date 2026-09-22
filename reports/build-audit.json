@@ -48,11 +48,11 @@
   "zephyr_commit": "dccb09599635bdff17633fa7e9dab014b91dce90",
   "sdk": "1.0.1",
   "board": "wind_controller/esp32c3",
-  "application_bytes": 133876,
+  "application_bytes": 133924,
   "hardware_data_sha256": "7d92aecd7f26bbdb8a18cfe87e7b4a6b004ff39f5d33d4f16255b2af62f23b33",
   "artifacts": {
-    "build\\zephyr\\zephyr.elf": "04e078cc2076f28d821af86860bec12c64795abef295f9a42294af229d00ce7d",
-    "build\\zephyr\\zephyr.bin": "08dcbe51dd179d671ae5545513d0c2a0ee394d0e86cd532974feb1f674014c94",
+    "build\\zephyr\\zephyr.elf": "4f57b88e2ef92c727891df46afcd8ae0812648526e4b658e84b126b94b87274b",
+    "build\\zephyr\\zephyr.bin": "e7ca3e10e116ec681ce9e530845a9c0343d5c50d5ff5d315fa87c369409b5414",
     "build\\zephyr\\.config": "82fbc5d4f11ff95d267dedd6a49ce648667fbe628e3452926878a6cebc5e1ca1",
     "build\\zephyr\\zephyr.dts": "992ce48aedec87ebd61f3660f78a79158b2949a08499456ed763410ba269c497"
   },
