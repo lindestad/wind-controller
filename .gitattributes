@@ -1,2 +1,2 @@
 # Preserve manufacturing file hashes across Windows/Linux checkouts.
-hardware/** -text
+hardware/** -text -whitespace

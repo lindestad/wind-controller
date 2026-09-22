@@ -7,7 +7,10 @@ tach warnings, watchdog and command timeout.
 
 ## Recreate the software setup
 
-1. Clone Rig Companion and follow its README to build/install the Windows app with Rust.
+1. Clone Rig Companion and check out the tested integration revision
+   [`ae4ed97`](https://github.com/lindestad/rig-companion/commit/ae4ed97)
+   (published on `wind-curves`), then follow its README to build/install with Rust:
+   `git checkout ae4ed97`.
 2. Install SimHub. The tested SDK/runtime is **SimHub 9.12.4**, .NET Framework 4.8.
 3. Build the bridge source included in `integrations/simhub`:
    `dotnet build integrations/simhub/RigCompanion.WindBridge.csproj -c Release`.
@@ -32,7 +35,14 @@ estimated top speed **minus 15 km/h**, capped by the selected maximum fan percen
 The default curve exponent is 0.60; 1.00 is linear. The UI graph and slider edit the
 curve, and a manual estimate handles unknown cars or unusual setups. Missing/stale
 game data produces minimum airflow within the selected run mode. See the companion's
-`docs/wind-car-speeds.md` for sources, formula, fallback rules and validation.
+[`docs/wind-car-speeds.md`](https://github.com/lindestad/rig-companion/blob/ae4ed97/docs/wind-car-speeds.md)
+for sources, formula, fallback rules and validation.
+
+The paired release passed 38 Rust library tests and a test invoking the installed
+SimHub SDK callback with synthetic car/speed data and receiving the actual UDP
+payload. The installed bridge also passed a live COM4 check: fresh heartbeat,
+controller telemetry, stopped outputs, USB release/reconnect and clean shutdown.
+These checks do not validate every car estimate against an on-track maximum.
 
 Firmware commands remain `W,left,right\n`, with each demand 0–1000. Any custom host
 can implement this protocol directly; keep commands flowing every 100 ms. This source
