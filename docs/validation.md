@@ -1,3 +1,9 @@
+# Current functional status — 22 September 2026
+
+The assembled board was flashed through native USB. One-fan warning behaviour and powered R1/R2 operation were exercised; user confirmed normal start/stop and good airflow. The RPM telemetry firmware was flashed successfully with 12 V attached, and the Rig Companion/SimHub bridge passed a stopped-output hardware smoke test. User subsequently confirmed the integrated application works. At 100% demand, reported speeds were roughly 2,470/2,410 RPM. Independent voltage, current, temperature, PWM timing and calibrated RPM measurements remain unperformed.
+
+The chronological notes below retain the limits of each test when it was performed; later entries supersede earlier “pending” statements.
+
 # Pre-order firmware verification
 
 ## 22 September 2026 update: optional fans and USB warnings

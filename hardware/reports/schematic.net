@@ -1,0 +1,3078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\danie\dev\wind-controller\hardware\windpcb.kicad_sch</source>
+    <date>2026-09-22T13:59:40</date>
+    <tool>Eeschema 10.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Wind simulator / four-channel controller</title>
+        <company>LINDESTAD</company>
+        <rev>B.3</rev>
+        <date>2026-09-06</date>
+        <source>windpcb.kicad_sch</source>
+        <comment number="1" value="ESP32-C3 / Zephyr / USB ROM recovery / protected 12V input"/>
+        <comment number="2" value="Engineering design: verify reports and release status before manufacture"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1uF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">CL10A105KB8NNNC</field>
+        <field name="LCSC">C15849</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CL10A105KB8NNNC"/>
+      <property name="LCSC" value="C15849"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>51704243-3bfc-5c65-9b5d-fbd320e61e55</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>1uF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">CL10A105KB8NNNC</field>
+        <field name="LCSC">C15849</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CL10A105KB8NNNC"/>
+      <property name="LCSC" value="C15849"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01f162b1-e4e9-5020-91a9-b8c27ed0beaa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>10uF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">GRM21BR61H106KE43L</field>
+        <field name="LCSC">C440198</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="GRM21BR61H106KE43L"/>
+      <property name="LCSC" value="C440198"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0de2b69a-fc7b-5efc-a4aa-7968d28d2c03</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>100nF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="LCSC">C14663</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>64f82d02-6407-5e82-a917-d756d97f947d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>1uF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">CL10A105KB8NNNC</field>
+        <field name="LCSC">C15849</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CL10A105KB8NNNC"/>
+      <property name="LCSC" value="C15849"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a15215dc-d78e-5e4f-a2c0-1f0cd717ba45</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>47uF / 50V</value>
+      <footprint>Wind:Capacitor_THT_CP_Radial_D6.3mm_P2.50mm</footprint>
+      <fields>
+        <field name="MPN">EEUFR1H470</field>
+        <field name="LCSC">C407950</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:Capacitor_THT_CP_Radial_D6.3mm_P2.50mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="EEUFR1H470"/>
+      <property name="LCSC" value="C407950"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6ffb7a2-0f40-56e0-8f10-9ba9c754b71f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>1uF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B105KBFNNNE</field>
+        <field name="LCSC">C28323</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CL21B105KBFNNNE"/>
+      <property name="LCSC" value="C28323"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c665e6e-6cbb-5edb-9437-985e7942c89c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100nF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="LCSC">C14663</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>85b56143-f870-5a2f-becf-61023b53838a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>470uF / 25V</value>
+      <footprint>Wind:Capacitor_THT_CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="MPN">EEUFR1E471</field>
+        <field name="LCSC">C407944</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:Capacitor_THT_CP_Radial_D10.0mm_P5.00mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C_Polarized" description="Polarized capacitor"/>
+      <property name="MPN" value="EEUFR1E471"/>
+      <property name="LCSC" value="C407944"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="CP_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61579657-be4b-546e-b664-5d63f1938239</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>1uF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">CL21B105KBFNNNE</field>
+        <field name="LCSC">C28323</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CL21B105KBFNNNE"/>
+      <property name="LCSC" value="C28323"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>51252e39-b720-521d-ba89-f0bc25f51964</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>100nF / 50V</value>
+      <footprint>Wind:Capacitor_SMD_C_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">CC0603KRX7R9BB104</field>
+        <field name="LCSC">C14663</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Capacitor_SMD_C_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="CC0603KRX7R9BB104"/>
+      <property name="LCSC" value="C14663"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5898224-bfb9-5f7c-99e1-7ff42a4eb0a3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D1">
+      <value>BZT52C9V1</value>
+      <footprint>Wind:Diode_SMD_D_SOD-123</footprint>
+      <fields>
+        <field name="MPN">BZT52C9V1-7-F</field>
+        <field name="LCSC">C260913</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Diode_SMD_D_SOD-123</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_D_Zener" description="Zener diode"/>
+      <property name="MPN" value="BZT52C9V1-7-F"/>
+      <property name="LCSC" value="C260913"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01bca101-6fb1-5aa2-8481-8f064b53a7e6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D2">
+      <value>SMBJ15A TVS</value>
+      <footprint>Wind:Diode_SMD_D_SMB</footprint>
+      <fields>
+        <field name="MPN">SMBJ15A</field>
+        <field name="LCSC">C83846</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Diode_SMD_D_SMB</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_D_Zener" description="Zener diode"/>
+      <property name="MPN" value="SMBJ15A"/>
+      <property name="LCSC" value="C83846"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="diode"/>
+      <property name="ki_fp_filters" value="TO-???* *_Diode_* *SingleDiode* D_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>386222ca-82f4-5fbb-a107-ddf1eee7e776</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D3">
+      <value>STATUS GREEN</value>
+      <footprint>Wind:LED_SMD_LED_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">KT-0805G</field>
+        <field name="LCSC">C2297</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:LED_SMD_LED_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_LED" description="Light emitting diode"/>
+      <property name="MPN" value="KT-0805G"/>
+      <property name="LCSC" value="C2297"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a53a51e-5b22-532e-a9ab-68b7db5db806</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="D4">
+      <value>FAULT RED</value>
+      <footprint>Wind:LED_SMD_LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">KT-0603R</field>
+        <field name="LCSC">C2286</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:LED_SMD_LED_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_LED" description="Light emitting diode"/>
+      <property name="MPN" value="KT-0603R"/>
+      <property name="LCSC" value="C2286"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fc58dec-3f47-5a48-a78d-585eb9a5be3c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>3A / 32V</value>
+      <footprint>Wind:Fuse_Fuse_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">0466003.NRHF</field>
+        <field name="LCSC">C14165</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Fuse_Fuse_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_Fuse" description="Fuse"/>
+      <property name="MPN" value="0466003.NRHF"/>
+      <property name="LCSC" value="C14165"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="fuse"/>
+      <property name="ki_fp_filters" value="*Fuse*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>30b040f9-8655-55da-9e2c-b3fa99bc68f9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="FB1">
+      <value>120R@100MHz / 3.5A</value>
+      <footprint>Wind:Inductor_SMD_L_1206_3216Metric</footprint>
+      <fields>
+        <field name="MPN">BLM31PG121SN1L</field>
+        <field name="LCSC">C85841</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Inductor_SMD_L_1206_3216Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_FerriteBead" description="Ferrite bead"/>
+      <property name="MPN" value="BLM31PG121SN1L"/>
+      <property name="LCSC" value="C85841"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="L ferrite bead inductor filter"/>
+      <property name="ki_fp_filters" value="Inductor_* L_* *Ferrite*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fbdf7301-8dd6-54f7-a67b-acee2ca099fa</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>12V / CENTER +</value>
+      <footprint>Wind:BarrelJack_XKB_DC-005-5A-2.5</footprint>
+      <datasheet>https://img.iceasy.com/product/product/files/202107/C381115_F2190B40D933B9992A6C1A8F3C065453.pdf</datasheet>
+      <fields>
+        <field name="MPN">DC-005-5A-2.5</field>
+        <field name="LCSC">C381115</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:BarrelJack_XKB_DC-005-5A-2.5</field>
+        <field name="Datasheet">https://img.iceasy.com/product/product/files/202107/C381115_F2190B40D933B9992A6C1A8F3C065453.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_Barrel_Jack_Switch" description="DC Barrel Jack with an internal switch"/>
+      <property name="MPN" value="DC-005-5A-2.5"/>
+      <property name="LCSC" value="C381115"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="DC power barrel jack connector"/>
+      <property name="ki_fp_filters" value="BarrelJack*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>53b8d199-5093-51b3-a4ab-e9ceec24e1a4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>USB-C DATA</value>
+      <footprint>Wind:Connector_USB_USB_C_Receptacle_HRO_TYPE-C-31-M-12</footprint>
+      <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
+      <fields>
+        <field name="MPN">TYPE-C-31-M-12</field>
+        <field name="LCSC">C165948</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Connector_USB_USB_C_Receptacle_HRO_TYPE-C-31-M-12</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_USB_C_Receptacle_USB2.0_16P" description="USB 2.0-only 16P Type-C Receptacle connector"/>
+      <property name="MPN" value="TYPE-C-31-M-12"/>
+      <property name="LCSC" value="C165948"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
+      <property name="ki_fp_filters" value="USB*C*Receptacle*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a4d9d26-3727-5a6b-8662-f6945de8defc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="SH"/>
+            <pin num="A1"/>
+            <pin num="A12"/>
+            <pin num="B1"/>
+            <pin num="B12"/>
+            <pin num="A4"/>
+            <pin num="A9"/>
+            <pin num="B4"/>
+            <pin num="B9"/>
+            <pin num="A5"/>
+            <pin num="B5"/>
+            <pin num="A7"/>
+            <pin num="B7"/>
+            <pin num="A6"/>
+            <pin num="B6"/>
+            <pin num="A8"/>
+            <pin num="B8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>L1</value>
+      <footprint>Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">470531000</field>
+        <field name="LCSC">C240840</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_Generic_Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="470531000"/>
+      <property name="LCSC" value="C240840"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>969bd2dd-ed60-5f03-8dbd-7a0368a0eada</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>L2</value>
+      <footprint>Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">470531000</field>
+        <field name="LCSC">C240840</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_Generic_Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="470531000"/>
+      <property name="LCSC" value="C240840"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>22b26611-58d3-5e83-b2fb-6525441d3910</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J5">
+      <value>R1</value>
+      <footprint>Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">470531000</field>
+        <field name="LCSC">C240840</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_Generic_Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="470531000"/>
+      <property name="LCSC" value="C240840"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31bba08c-1bea-5cd8-82f4-fd32e14c76da</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J6">
+      <value>R2</value>
+      <footprint>Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="MPN">470531000</field>
+        <field name="LCSC">C240840</field>
+        <field name="Assembly">THT</field>
+        <field name="Footprint">Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_Generic_Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="MPN" value="470531000"/>
+      <property name="LCSC" value="C240840"/>
+      <property name="Assembly" value="THT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8d35eb83-ce8a-51b0-929e-73a9af1d28d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>AO3401A</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</datasheet>
+      <fields>
+        <field name="MPN">AO3401A</field>
+        <field name="LCSC">C15127</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Transistor_FET_AO3401A" description="-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="AO3401A"/>
+      <property name="LCSC" value="C15127"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="P-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>391ed9c1-42f9-5312-bed5-823f91e183af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>afd3e248-a58f-51da-bfa7-6898d17019d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q3">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f0d2a7a0-e92a-5a14-bc48-d6daabd73d4d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q4">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6765152e-43d7-501f-9a8f-164b263dfb61</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q5">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74a40c1d-27ca-5084-bdf9-8f990bf5eaf8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q6">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d567840e-63e2-522b-b2da-2f306008d98e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q7">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d630a992-09c3-53a1-be65-afe1eccaa433</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q8">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>de4d559a-32d9-5c93-baa0-2068cde236ed</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q9">
+      <value>SI2312-TP</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23</footprint>
+      <datasheet>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</datasheet>
+      <fields>
+        <field name="MPN">SI2312-TP</field>
+        <field name="LCSC">C6488168</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="SI2312" description="50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23"/>
+      <property name="MPN" value="SI2312-TP"/>
+      <property name="LCSC" value="C6488168"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="N-Channel MOSFET"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b8db188-d653-5a97-a3ab-de658e39e70c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>5.1k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF5101T5E</field>
+        <field name="LCSC">C23186</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF5101T5E"/>
+      <property name="LCSC" value="C23186"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b00f09f5-0565-59f8-b346-500d7e758e02</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>5.1k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF5101T5E</field>
+        <field name="LCSC">C23186</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF5101T5E"/>
+      <property name="LCSC" value="C23186"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>831803c8-d4c2-553e-a7e0-955603415a3e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>22</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF220JT5E</field>
+        <field name="LCSC">C23345</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF220JT5E"/>
+      <property name="LCSC" value="C23345"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0e8ec39b-44d3-5b5f-a49d-9b413f80baec</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>22</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF220JT5E</field>
+        <field name="LCSC">C23345</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF220JT5E"/>
+      <property name="LCSC" value="C23345"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7927c35c-cc2b-5d5d-85f9-369a886c8a5b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="LCSC">C25804</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>37565785-6bb4-5ae0-a1c7-27c9773c1b20</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="LCSC">C25804</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c1ab336-439c-5f5e-bfc1-7e2b8133e3d1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="LCSC">C25804</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d36cb958-b494-5b2c-8401-fe3a36c300a3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="LCSC">C25804</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2b00ae42-fdc3-5be7-8609-45ea3f30ab75</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="LCSC">C21190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46a35821-1b0d-541f-b68c-05f078c0c9d7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>4.7k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="LCSC">C23162</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="LCSC" value="C23162"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>23fe7e4c-16ed-5c23-8328-1b264740059b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>97.6k 0.1%</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RT0603BRE0797K6L</field>
+        <field name="LCSC">C862326</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RT0603BRE0797K6L"/>
+      <property name="LCSC" value="C862326"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b915e2cb-75c5-5a52-9b13-b475eaea291b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>10k 0.1%</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">RT0603BRD0710KL</field>
+        <field name="LCSC">C95204</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="RT0603BRD0710KL"/>
+      <property name="LCSC" value="C95204"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>02ed26e6-ae28-51b4-b8f0-4fc4c67dfc09</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>2.4k 1%</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF2401T5E</field>
+        <field name="LCSC">C22940</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF2401T5E"/>
+      <property name="LCSC" value="C22940"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d08a7ea2-04cd-5472-80c2-a65820ec50b6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="LCSC">C21190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a9d5f0aa-80e6-567d-b6c5-fe15356f7af2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>10k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="LCSC">C25804</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e8f35f2-46c0-5f0b-a96d-8f875485db0b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>4.7k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF4701T5E</field>
+        <field name="LCSC">C23162</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF4701T5E"/>
+      <property name="LCSC" value="C23162"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>394dd5aa-ee0e-5647-b4bd-172ebbfd7fb6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>10k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1002T5E</field>
+        <field name="LCSC">C25804</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1002T5E"/>
+      <property name="LCSC" value="C25804"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>936f1bc8-925e-5393-8d14-d1bc1fb32a24</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>2.2k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF2201T5E</field>
+        <field name="LCSC">C4190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF2201T5E"/>
+      <property name="LCSC" value="C4190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6985d666-552a-59b5-8019-d07c7ba5a201</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>1k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1001T5E</field>
+        <field name="LCSC">C21190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1001T5E"/>
+      <property name="LCSC" value="C21190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5494e078-113d-59cc-9966-1597d96f6eab</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>100</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1000T5E</field>
+        <field name="LCSC">C22775</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1000T5E"/>
+      <property name="LCSC" value="C22775"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d0fa24be-4373-5fbc-bfa3-18ad3f8545bc</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>100k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="LCSC">C25803</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="LCSC" value="C25803"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25cb26c9-2f47-5420-bba2-366f381b246a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R22">
+      <value>2.2k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF2201T5E</field>
+        <field name="LCSC">C4190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF2201T5E"/>
+      <property name="LCSC" value="C4190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8eed6cf-718b-5aa8-94f9-06eab0a36095</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R25">
+      <value>100</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1000T5E</field>
+        <field name="LCSC">C22775</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1000T5E"/>
+      <property name="LCSC" value="C22775"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ddd9c02-2d7c-5dc1-8677-f9a5848430a3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R26">
+      <value>100k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="LCSC">C25803</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="LCSC" value="C25803"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>653add0b-ed9c-55a9-9f2c-c935d03c0858</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R27">
+      <value>2.2k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF2201T5E</field>
+        <field name="LCSC">C4190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF2201T5E"/>
+      <property name="LCSC" value="C4190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4a3e05d2-a2c7-56c1-b5bb-5ccf9ce97473</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R30">
+      <value>100</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1000T5E</field>
+        <field name="LCSC">C22775</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1000T5E"/>
+      <property name="LCSC" value="C22775"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d01bc38e-6183-529d-8d97-3a7be1b01e6c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R31">
+      <value>100k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="LCSC">C25803</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="LCSC" value="C25803"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db235dfc-8be6-5a56-9e29-d31bd7ba1ea6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R32">
+      <value>2.2k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF2201T5E</field>
+        <field name="LCSC">C4190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF2201T5E"/>
+      <property name="LCSC" value="C4190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>298a556a-a9d1-5940-9dad-ecab139c1075</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R35">
+      <value>100</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1000T5E</field>
+        <field name="LCSC">C22775</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1000T5E"/>
+      <property name="LCSC" value="C22775"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2944fd25-d05d-5994-8991-a2a75ac8e2fe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R36">
+      <value>100k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1003T5E</field>
+        <field name="LCSC">C25803</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1003T5E"/>
+      <property name="LCSC" value="C25803"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b0f32e0-f3cb-5e7c-b6e4-ce6e8c0526e7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R37">
+      <value>2.2k</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF2201T5E</field>
+        <field name="LCSC">C4190</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF2201T5E"/>
+      <property name="LCSC" value="C4190"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>607ea8c3-eef0-5ca8-accc-1668e8bae8b5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R40">
+      <value>100</value>
+      <footprint>Wind:Resistor_SMD_R_0603_1608Metric</footprint>
+      <fields>
+        <field name="MPN">0603WAF1000T5E</field>
+        <field name="LCSC">C22775</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Resistor_SMD_R_0603_1608Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Device_R" description="Resistor"/>
+      <property name="MPN" value="0603WAF1000T5E"/>
+      <property name="LCSC" value="C22775"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd3a021b-e297-5206-b557-7b4c6528352e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW1">
+      <value>BOOT</value>
+      <footprint>Wind:Button_Switch_SMD_SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="MPN">TL3342F160QG</field>
+        <field name="LCSC">C2886898</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Button_Switch_SMD_SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Switch_SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="MPN" value="TL3342F160QG"/>
+      <property name="LCSC" value="C2886898"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d2ecb78d-4be1-58bd-a79d-a2c8ab36bfb0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="SW2">
+      <value>RESET</value>
+      <footprint>Wind:Button_Switch_SMD_SW_SPST_TL3342</footprint>
+      <fields>
+        <field name="MPN">TL3342F160QG</field>
+        <field name="LCSC">C2886898</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Button_Switch_SMD_SW_SPST_TL3342</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Switch_SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="MPN" value="TL3342F160QG"/>
+      <property name="LCSC" value="C2886898"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>616d5244-7a52-5581-9517-92f51635697a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>GND</value>
+      <footprint>Wind:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB test point</field>
+        <field name="LCSC"/>
+        <field name="Assembly">PCB</field>
+        <field name="Footprint">Wind:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test point"/>
+      <property name="LCSC" value=""/>
+      <property name="Assembly" value="PCB"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c8e28a1-1a3f-5b46-998d-64138bec2791</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>+3V3</value>
+      <footprint>Wind:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB test point</field>
+        <field name="LCSC"/>
+        <field name="Assembly">PCB</field>
+        <field name="Footprint">Wind:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test point"/>
+      <property name="LCSC" value=""/>
+      <property name="Assembly" value="PCB"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>402b541e-489b-53f7-acb1-0f42cebca13f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>FAN_12V</value>
+      <footprint>Wind:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB test point</field>
+        <field name="LCSC"/>
+        <field name="Assembly">PCB</field>
+        <field name="Footprint">Wind:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test point"/>
+      <property name="LCSC" value=""/>
+      <property name="Assembly" value="PCB"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec645d25-7430-52ba-8e24-bb679a60be74</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>VIN_FILTERED</value>
+      <footprint>Wind:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB test point</field>
+        <field name="LCSC"/>
+        <field name="Assembly">PCB</field>
+        <field name="Footprint">Wind:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test point"/>
+      <property name="LCSC" value=""/>
+      <property name="Assembly" value="PCB"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8c1d862-24dd-568c-973d-cebd892a427d</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>FAULT_N</value>
+      <footprint>Wind:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB test point</field>
+        <field name="LCSC"/>
+        <field name="Assembly">PCB</field>
+        <field name="Footprint">Wind:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test point"/>
+      <property name="LCSC" value=""/>
+      <property name="Assembly" value="PCB"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1dfa84a-49a4-5644-9ba2-198d2686edba</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP6">
+      <value>EFUSE_EN</value>
+      <footprint>Wind:TestPoint_TestPoint_Pad_D1.5mm</footprint>
+      <fields>
+        <field name="MPN">PCB test point</field>
+        <field name="LCSC"/>
+        <field name="Assembly">PCB</field>
+        <field name="Footprint">Wind:TestPoint_TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Connector_TestPoint" description="test point"/>
+      <property name="MPN" value="PCB test point"/>
+      <property name="LCSC" value=""/>
+      <property name="Assembly" value="PCB"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c98effc-3222-57ea-bfdb-6cbd2b9bb947</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-C3-WROOM-02-N4</value>
+      <footprint>Wind:RF_Module_ESP32-C3-WROOM-02</footprint>
+      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf</datasheet>
+      <fields>
+        <field name="MPN">ESP32-C3-WROOM-02-N4</field>
+        <field name="LCSC">C2934560</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:RF_Module_ESP32-C3-WROOM-02</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="RF_Module_ESP32-C3-WROOM-02" description="802.11 b/g/n Wi­Fi and Bluetooth 5 module, ESP32­C3 SoC, RISC­V microprocessor, On-board antenna"/>
+      <property name="MPN" value="ESP32-C3-WROOM-02-N4"/>
+      <property name="LCSC" value="C2934560"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="esp32 espressif WiFi Bluetooth LE"/>
+      <property name="ki_fp_filters" value="ESP32?C3*WROOM?02*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4fe64ca-95ef-565e-9855-0735ff7e4344</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="18"/>
+            <pin num="17"/>
+            <pin num="16"/>
+            <pin num="15"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="1"/>
+            <pin num="9"/>
+            <pin num="19"/>
+            <pin num="11"/>
+            <pin num="12"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>AP2112K-3.3</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23-5</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/AP2112.pdf</datasheet>
+      <fields>
+        <field name="MPN">AP2112K-3.3TRG1</field>
+        <field name="LCSC">C51118</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23-5</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2112.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Regulator_Linear_AP2112K-3.3" description="600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"/>
+      <property name="MPN" value="AP2112K-3.3TRG1"/>
+      <property name="LCSC" value="C51118"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="linear regulator ldo fixed positive"/>
+      <property name="ki_fp_filters" value="SOT?23?5*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ee7aa7de-c209-5790-a56d-f422bad6922c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>USBLC6-2SC6</value>
+      <footprint>Wind:Package_TO_SOT_SMD_SOT-23-6</footprint>
+      <datasheet>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</datasheet>
+      <fields>
+        <field name="MPN">USBLC6-2SC6</field>
+        <field name="LCSC">C7519</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:Package_TO_SOT_SMD_SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="Power_Protection_USBLC6-2SC6" description="Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"/>
+      <property name="MPN" value="USBLC6-2SC6"/>
+      <property name="LCSC" value="C7519"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <property name="ki_keywords" value="usb ethernet video"/>
+      <property name="ki_fp_filters" value="SOT?23*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15a473dd-57a7-5efe-8576-5e44fa600a73</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="5"/>
+            <pin num="2"/>
+            <pin num="6"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>TPS25970LRPWR</value>
+      <footprint>Wind:TPS25970_RPW0010A_2x2mm</footprint>
+      <fields>
+        <field name="MPN">TPS25970LRPWR</field>
+        <field name="LCSC">C3662801</field>
+        <field name="Assembly">SMT</field>
+        <field name="Footprint">Wind:TPS25970_RPW0010A_2x2mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Wind" part="TPS25970LRPWR" description=""/>
+      <property name="MPN" value="TPS25970LRPWR"/>
+      <property name="LCSC" value="C3662801"/>
+      <property name="Assembly" value="SMT"/>
+      <property name="Sheetname" value="windpcb"/>
+      <property name="Sheetfile" value="windpcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5d332061-93ef-5abc-aaf9-e0b6e5dbd478</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="5"/>
+            <pin num="1"/>
+            <pin num="10"/>
+            <pin num="2"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="4"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Wind" part="Connector_Barrel_Jack_Switch">
+      <description>DC Barrel Jack with an internal switch</description>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack_Switch</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">DC Barrel Jack with an internal switch</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Connector_Generic_Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Connector_TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Connector_USB_C_Receptacle_USB2.0_16P">
+      <description>USB 2.0-only 16P Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0_16P</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+        <field name="Description">USB 2.0-only 16P Type-C Receptacle connector</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="SH" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_C_Polarized">
+      <description>Polarized capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Polarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_D_Zener">
+      <description>Zener diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Zener diode</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_FerriteBead">
+      <description>Ferrite bead</description>
+      <footprints>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+        <fp>*Ferrite*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">FB</field>
+        <field name="Value">FerriteBead</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Ferrite bead</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_Fuse">
+      <description>Fuse</description>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_LED">
+      <description>Light emitting diode</description>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Device_R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Power_Protection_USBLC6-2SC6">
+      <description>Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</description>
+      <docs>https://www.st.com/resource/en/datasheet/usblc6-2.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">USBLC6-2SC6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-6</field>
+        <field name="Datasheet">https://www.st.com/resource/en/datasheet/usblc6-2.pdf</field>
+        <field name="Description">Very low capacitance ESD protection diode, 2 data-line, SOT-23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I/O1" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="I/O2" type="passive"/>
+        <pin num="4" name="I/O2" type="passive"/>
+        <pin num="5" name="VBUS" type="passive"/>
+        <pin num="6" name="I/O1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="RF_Module_ESP32-C3-WROOM-02">
+      <description>802.11 b/g/n Wi­Fi and Bluetooth 5 module, ESP32­C3 SoC, RISC­V microprocessor, On-board antenna</description>
+      <docs>https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf</docs>
+      <footprints>
+        <fp>ESP32?C3*WROOM?02*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-C3-WROOM-02</field>
+        <field name="Footprint">RF_Module:ESP32-C3-WROOM-02</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-c3-wroom-02_datasheet_en.pdf</field>
+        <field name="Description">802.11 b/g/n Wi­Fi and Bluetooth 5 module, ESP32­C3 SoC, RISC­V microprocessor, On-board antenna</field>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_in"/>
+        <pin num="2" name="EN" type="input"/>
+        <pin num="3" name="IO4" type="bidirectional"/>
+        <pin num="4" name="IO5" type="bidirectional"/>
+        <pin num="5" name="IO6" type="bidirectional"/>
+        <pin num="6" name="IO7" type="bidirectional"/>
+        <pin num="7" name="IO8" type="bidirectional"/>
+        <pin num="8" name="IO9" type="bidirectional"/>
+        <pin num="9" name="GND" type="power_in"/>
+        <pin num="10" name="IO10" type="bidirectional"/>
+        <pin num="11" name="IO20/RXD" type="bidirectional"/>
+        <pin num="12" name="IO21/TXD" type="bidirectional"/>
+        <pin num="13" name="IO18" type="bidirectional"/>
+        <pin num="14" name="IO19" type="bidirectional"/>
+        <pin num="15" name="IO3" type="bidirectional"/>
+        <pin num="16" name="IO2" type="bidirectional"/>
+        <pin num="17" name="IO1" type="bidirectional"/>
+        <pin num="18" name="IO0" type="bidirectional"/>
+        <pin num="19" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Regulator_Linear_AP2112K-3.3">
+      <description>600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5</description>
+      <docs>https://www.diodes.com/assets/Datasheets/AP2112.pdf</docs>
+      <footprints>
+        <fp>SOT?23?5*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP2112K-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP2112.pdf</field>
+        <field name="Description">600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="SI2312">
+      <description>50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">SI2312-TP</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.mccsemi.com/pdf/Products/SI2312(SOT-23).pdf</field>
+        <field name="Description">50V Vds, 0.22A Id, N-Channel MOSFET, SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Switch_SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Push button switch, generic, two pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="TPS25970LRPWR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS25970LRPWR</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="EN/UVLO" type="input"/>
+        <pin num="2" name="OVLO" type="input"/>
+        <pin num="3" name="DNC" type="no_connect"/>
+        <pin num="4" name="~{FAULT}" type="open_collector"/>
+        <pin num="5" name="IN" type="power_in"/>
+        <pin num="6" name="OUT" type="power_out"/>
+        <pin num="7" name="DVDT" type="passive"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="ILM" type="passive"/>
+        <pin num="10" name="ITIMER" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Wind" part="Transistor_FET_AO3401A">
+      <description>-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23</description>
+      <docs>http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">AO3401A</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf</field>
+        <field name="Description">-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Wind">
+      <uri>${KIPRJMOD}/libraries/Wind.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/+3V3" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="Q6" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="Q7" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="Q8" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="Q9" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R22" pin="2" pintype="passive"/>
+      <node ref="R27" pin="2" pintype="passive"/>
+      <node ref="R32" pin="2" pintype="passive"/>
+      <node ref="R37" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="3V3_1" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="VOUT_5" pintype="power_out"/>
+    </net>
+    <net code="2" name="/BOOT_N" class="Default">
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="IO9_8" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="/CC1" class="Default">
+      <node ref="J2" pin="A5" pinfunction="CC1_A5" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="/CC2" class="Default">
+      <node ref="J2" pin="B5" pinfunction="CC2_B5" pintype="bidirectional"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="5" name="/DVDT" class="Default">
+      <node ref="R40" pin="1" pintype="passive"/>
+      <node ref="U4" pin="7" pinfunction="DVDT_7" pintype="passive"/>
+    </net>
+    <net code="6" name="/DVDT_CAP" class="Default">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="R40" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/EFUSE_EN" class="Default">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="EN/UVLO_1" pintype="input"/>
+    </net>
+    <net code="8" name="/FAN_12V" class="Default">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="6" pinfunction="OUT_6" pintype="power_out"/>
+    </net>
+    <net code="9" name="/FAN_ENABLE" class="Default">
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="IO10_10" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/FAULT_LED_A" class="Default">
+      <node ref="D4" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/FAULT_N" class="Default">
+      <node ref="D4" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="4" pinfunction="~{FAULT}_4" pintype="open_collector"/>
+    </net>
+    <net code="12" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="J1" pin="3" pintype="passive"/>
+      <node ref="J2" pin="A1" pinfunction="GND_A1" pintype="passive"/>
+      <node ref="J2" pin="A12" pinfunction="GND_A12" pintype="passive"/>
+      <node ref="J2" pin="B1" pinfunction="GND_B1" pintype="passive"/>
+      <node ref="J2" pin="B12" pinfunction="GND_B12" pintype="passive"/>
+      <node ref="J2" pin="SH" pinfunction="SHIELD_SH" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="Q5" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+      <node ref="R26" pin="2" pintype="passive"/>
+      <node ref="R31" pin="2" pintype="passive"/>
+      <node ref="R36" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2_2" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="GND_19" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="GND_9" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="GND_2" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="GND_2" pintype="passive"/>
+      <node ref="U4" pin="8" pinfunction="GND_8" pintype="power_in"/>
+    </net>
+    <net code="13" name="/ILM" class="Default">
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="U4" pin="9" pinfunction="ILM_9" pintype="passive"/>
+    </net>
+    <net code="14" name="/LED_A" class="Default">
+      <node ref="D3" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="/MCU_EN" class="Default">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="SW2" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="EN_2" pintype="input"/>
+    </net>
+    <net code="16" name="/OVLO" class="Default">
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="OVLO_2" pintype="input"/>
+    </net>
+    <net code="17" name="/PWM_L1" class="Default">
+      <node ref="J3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="18" name="/PWM_L1_DRV" class="Default">
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="IO4_3" pintype="bidirectional"/>
+    </net>
+    <net code="19" name="/PWM_L1_GATE" class="Default">
+      <node ref="Q2" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="/PWM_L2" class="Default">
+      <node ref="J4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="21" name="/PWM_L2_DRV" class="Default">
+      <node ref="R25" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="IO5_4" pintype="bidirectional"/>
+    </net>
+    <net code="22" name="/PWM_L2_GATE" class="Default">
+      <node ref="Q3" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R25" pin="2" pintype="passive"/>
+      <node ref="R26" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="/PWM_R1" class="Default">
+      <node ref="J5" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="Q4" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="24" name="/PWM_R1_DRV" class="Default">
+      <node ref="R30" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="IO6_5" pintype="bidirectional"/>
+    </net>
+    <net code="25" name="/PWM_R1_GATE" class="Default">
+      <node ref="Q4" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R30" pin="2" pintype="passive"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+    </net>
+    <net code="26" name="/PWM_R2" class="Default">
+      <node ref="J6" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="Q5" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="27" name="/PWM_R2_DRV" class="Default">
+      <node ref="R35" pin="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="IO7_6" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="/PWM_R2_GATE" class="Default">
+      <node ref="Q5" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R35" pin="2" pintype="passive"/>
+      <node ref="R36" pin="1" pintype="passive"/>
+    </net>
+    <net code="29" name="/RP_GATE" class="Default">
+      <node ref="D1" pin="2" pinfunction="A_2" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="G_1" pintype="input"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="/STATUS_DRV" class="Default">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="IO21/TXD_12" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="/STRAP2" class="Default">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="IO2_16" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="/STRAP8" class="Default">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="IO8_7" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="/TACH_L1" class="Default">
+      <node ref="Q6" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="IO0_18" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="/TACH_L1_RAW" class="Default">
+      <node ref="J3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q6" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="35" name="/TACH_L2" class="Default">
+      <node ref="Q7" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R27" pin="1" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="IO1_17" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="/TACH_L2_RAW" class="Default">
+      <node ref="J4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q7" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="37" name="/TACH_R1" class="Default">
+      <node ref="Q8" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R32" pin="1" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="IO3_15" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="/TACH_R1_RAW" class="Default">
+      <node ref="J5" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q8" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="39" name="/TACH_R2" class="Default">
+      <node ref="Q9" pin="2" pinfunction="S_2" pintype="passive"/>
+      <node ref="R37" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="IO20/RXD_11" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="/TACH_R2_RAW" class="Default">
+      <node ref="J6" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="Q9" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="41" name="/USB_DN" class="Default">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="IO18_13" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="/USB_DN_CONN" class="Default">
+      <node ref="J2" pin="A7" pinfunction="D-_A7" pintype="bidirectional"/>
+      <node ref="J2" pin="B7" pinfunction="D-_B7" pintype="bidirectional"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="I/O2_3" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="I/O2_4" pintype="passive"/>
+    </net>
+    <net code="43" name="/USB_DP" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="IO19_14" pintype="bidirectional"/>
+    </net>
+    <net code="44" name="/USB_DP_CONN" class="Default">
+      <node ref="J2" pin="A6" pinfunction="D+_A6" pintype="bidirectional"/>
+      <node ref="J2" pin="B6" pinfunction="D+_B6" pintype="bidirectional"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pinfunction="I/O1_1" pintype="passive"/>
+      <node ref="U3" pin="6" pinfunction="I/O1_6" pintype="passive"/>
+    </net>
+    <net code="45" name="/USB_VBUS" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J2" pin="A4" pinfunction="VBUS_A4" pintype="passive"/>
+      <node ref="J2" pin="A9" pinfunction="VBUS_A9" pintype="passive"/>
+      <node ref="J2" pin="B4" pinfunction="VBUS_B4" pintype="passive"/>
+      <node ref="J2" pin="B9" pinfunction="VBUS_B9" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="VIN_1" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="EN_3" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="VBUS_5" pintype="passive"/>
+    </net>
+    <net code="46" name="/VIN_FILTERED" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="FB1" pin="2" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U4" pin="5" pinfunction="IN_5" pintype="power_in"/>
+    </net>
+    <net code="47" name="/VIN_FUSED" class="Default">
+      <node ref="F1" pin="2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D_3" pintype="passive"/>
+    </net>
+    <net code="48" name="/VIN_PROTECTED" class="Default">
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K_1" pintype="passive"/>
+      <node ref="FB1" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S_2" pintype="passive"/>
+    </net>
+    <net code="49" name="/VIN_RAW" class="Default">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pintype="passive"/>
+    </net>
+    <net code="50" name="unconnected-(J1-Pad2)" class="Default">
+      <node ref="J1" pin="2" pintype="passive+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(J2-SBU1-PadA8)" class="Default">
+      <node ref="J2" pin="A8" pinfunction="SBU1_A8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(J2-SBU2-PadB8)" class="Default">
+      <node ref="J2" pin="B8" pinfunction="SBU2_B8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U2-NC-Pad4)" class="Default">
+      <node ref="U2" pin="4" pinfunction="NC_4" pintype="no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U4-DNC-Pad3)" class="Default">
+      <node ref="U4" pin="3" pinfunction="DNC_3" pintype="no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U4-ITIMER-Pad10)" class="Default">
+      <node ref="U4" pin="10" pinfunction="ITIMER_10" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

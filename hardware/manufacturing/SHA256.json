@@ -1,0 +1,13 @@
+{
+  "windpcb.kicad_pro": "e465929fdc6d94e56feaffb0c5d5da06ac2a22c606195c9d33d4d691be3d0bdf",
+  "windpcb.kicad_sch": "c323d1f63edf549f3a019b60fdbc6681d756963ae0bc44f7be4ef981c768f9e1",
+  "windpcb.kicad_pcb": "6800c607be2fd5dfb22ef893be5bd12c85a2b55ab658f6d6c16e1e0e912130f3",
+  "BOM.csv": "65b69978c4be2199e26b604e1424fbc0dbac77a15e0fd3002dd55e3ad550d382",
+  "manufacturing\\assembly\\SMT-BOM.csv": "1bd4def8dde40cb3da77027c308b81256206a48b08876a0840b4dae65c5a5462",
+  "manufacturing\\assembly\\SMT-CPL.csv": "e2b02b61cccd22ff67589e4c00330f58728122cb6c35bf82aa794e6d30d48c24",
+  "manufacturing\\assembly\\PCBA-BOM.csv": "5faa61a5a616f69e9ad0e8da8fec6c5be76bbb8db154eaf09ca1030a48efe300",
+  "manufacturing\\assembly\\PCBA-CPL.csv": "dcf397544b99241b208da41c436dc6ffe5607ebbfb4f25e3f6a9a7583d02a101",
+  "manufacturing\\windpcb-revb-gerbers.zip": "2efa43edfd6ed096331f499467fe3b412114ebd04c601be5cc8e86957633b2c8",
+  "manufacturing\\paste\\windpcb-F_Paste.gtp": "8deab0e0bf68b94fd2a65fefcdd0deedbfdc8b72dd05621fc6e74a676d9a1559",
+  "manufacturing\\assembly\\HAND-BOM.csv": "b4ad91a98ef67dcd8a77df1bd80635725fe090cb399c9d69ea233b119a44be91"
+}

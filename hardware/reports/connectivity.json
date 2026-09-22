@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "schematic_connected_and_explicit_NC_pin_count": 211,
+  "board_numbered_pad_keys": 211,
+  "errors": [],
+  "mechanical_board_only": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6"
+  ],
+  "notes": "Repeated module ground pads are one logical pin; all occurrences checked by KiCad parity/DRC."
+}

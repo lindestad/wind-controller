@@ -1,0 +1,1885 @@
+[
+  {
+    "ref": "U1",
+    "symbol": "RF_Module_ESP32-C3-WROOM-02",
+    "value": "ESP32-C3-WROOM-02-N4",
+    "fp": "Wind:RF_Module_ESP32-C3-WROOM-02",
+    "nets": {
+      "1": "+3V3",
+      "2": "MCU_EN",
+      "3": "PWM_L1_DRV",
+      "4": "PWM_L2_DRV",
+      "5": "PWM_R1_DRV",
+      "6": "PWM_R2_DRV",
+      "7": "STRAP8",
+      "8": "BOOT_N",
+      "9": "GND",
+      "10": "FAN_ENABLE",
+      "11": "TACH_R2",
+      "12": "STATUS_DRV",
+      "13": "USB_DN",
+      "14": "USB_DP",
+      "15": "TACH_R1",
+      "16": "STRAP2",
+      "17": "TACH_L2",
+      "18": "TACH_L1",
+      "19": "GND"
+    },
+    "sch": [
+      250.19,
+      76.2
+    ],
+    "xy": [
+      43.0,
+      15.0
+    ],
+    "angle": 0.0,
+    "mpn": "ESP32-C3-WROOM-02-N4",
+    "lcsc": "C2934560",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "b4fe64ca-95ef-565e-9855-0735ff7e4344"
+  },
+  {
+    "ref": "J2",
+    "symbol": "Connector_USB_C_Receptacle_USB2.0_16P",
+    "value": "USB-C DATA",
+    "fp": "Wind:Connector_USB_USB_C_Receptacle_HRO_TYPE-C-31-M-12",
+    "nets": {
+      "A1": "GND",
+      "A12": "GND",
+      "B1": "GND",
+      "B12": "GND",
+      "SH": "GND",
+      "A4": "USB_VBUS",
+      "A9": "USB_VBUS",
+      "B4": "USB_VBUS",
+      "B9": "USB_VBUS",
+      "A5": "CC1",
+      "B5": "CC2",
+      "A6": "USB_DP_CONN",
+      "B6": "USB_DP_CONN",
+      "A7": "USB_DN_CONN",
+      "B7": "USB_DN_CONN",
+      "A8": null,
+      "B8": null
+    },
+    "sch": [
+      35.56,
+      73.66
+    ],
+    "xy": [
+      66.8,
+      24.0
+    ],
+    "angle": 90.0,
+    "mpn": "TYPE-C-31-M-12",
+    "lcsc": "C165948",
+    "assembly": "SMT",
+    "note": "Retained HRO TYPE-C-31-M-12: stocked economical 16-pin USB2 receptacle; shell PTH joints are part of factory assembly.",
+    "uuid": "7a4d9d26-3727-5a6b-8662-f6945de8defc"
+  },
+  {
+    "ref": "R1",
+    "symbol": "Device_R",
+    "value": "5.1k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "CC1",
+      "2": "GND"
+    },
+    "sch": [
+      78.74,
+      53.34
+    ],
+    "xy": [
+      60.0,
+      18.0
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF5101T5E",
+    "lcsc": "C23186",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "b00f09f5-0565-59f8-b346-500d7e758e02"
+  },
+  {
+    "ref": "R2",
+    "symbol": "Device_R",
+    "value": "5.1k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "CC2",
+      "2": "GND"
+    },
+    "sch": [
+      101.6,
+      53.34
+    ],
+    "xy": [
+      60.0,
+      28.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF5101T5E",
+    "lcsc": "C23186",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "831803c8-d4c2-553e-a7e0-955603415a3e"
+  },
+  {
+    "ref": "U3",
+    "symbol": "Power_Protection_USBLC6-2SC6",
+    "value": "USBLC6-2SC6",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23-6",
+    "nets": {
+      "1": "USB_DP_CONN",
+      "6": "USB_DP_CONN",
+      "3": "USB_DN_CONN",
+      "4": "USB_DN_CONN",
+      "2": "GND",
+      "5": "USB_VBUS"
+    },
+    "sch": [
+      102.87,
+      88.9
+    ],
+    "xy": [
+      59.0,
+      23.0
+    ],
+    "angle": 0.0,
+    "mpn": "USBLC6-2SC6",
+    "lcsc": "C7519",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "15a473dd-57a7-5efe-8576-5e44fa600a73"
+  },
+  {
+    "ref": "R3",
+    "symbol": "Device_R",
+    "value": "22",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "USB_DP_CONN",
+      "2": "USB_DP"
+    },
+    "sch": [
+      139.7,
+      78.74
+    ],
+    "xy": [
+      55.0,
+      19.0
+    ],
+    "angle": 180.0,
+    "mpn": "0603WAF220JT5E",
+    "lcsc": "C23345",
+    "assembly": "SMT",
+    "note": "Basic; 22 ohm 0603 1%, 100 mW. Reject auto-matched ET7222 IC.",
+    "uuid": "0e8ec39b-44d3-5b5f-a49d-9b413f80baec"
+  },
+  {
+    "ref": "R4",
+    "symbol": "Device_R",
+    "value": "22",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "USB_DN_CONN",
+      "2": "USB_DN"
+    },
+    "sch": [
+      165.1,
+      78.74
+    ],
+    "xy": [
+      55.0,
+      22.5
+    ],
+    "angle": 180.0,
+    "mpn": "0603WAF220JT5E",
+    "lcsc": "C23345",
+    "assembly": "SMT",
+    "note": "Basic; 22 ohm 0603 1%, 100 mW. Reject auto-matched ET7222 IC.",
+    "uuid": "7927c35c-cc2b-5d5d-85f9-369a886c8a5b"
+  },
+  {
+    "ref": "U2",
+    "symbol": "Regulator_Linear_AP2112K-3.3",
+    "value": "AP2112K-3.3",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23-5",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "GND",
+      "3": "USB_VBUS",
+      "4": null,
+      "5": "+3V3"
+    },
+    "sch": [
+      148.59,
+      38.1
+    ],
+    "xy": [
+      58.0,
+      12.0
+    ],
+    "angle": 90.0,
+    "mpn": "AP2112K-3.3TRG1",
+    "lcsc": "C51118",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "ee7aa7de-c209-5790-a56d-f422bad6922c"
+  },
+  {
+    "ref": "C1",
+    "symbol": "Device_C",
+    "value": "1uF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0603_1608Metric",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "GND"
+    },
+    "sch": [
+      101.6,
+      25.4
+    ],
+    "xy": [
+      62.0,
+      12.0
+    ],
+    "angle": 90.0,
+    "mpn": "CL10A105KB8NNNC",
+    "lcsc": "C15849",
+    "assembly": "SMT",
+    "note": "Basic; 0603 X5R 10%; logic decoupling, -55 to +85 C dielectric range.",
+    "uuid": "51704243-3bfc-5c65-9b5d-fbd320e61e55"
+  },
+  {
+    "ref": "C2",
+    "symbol": "Device_C",
+    "value": "1uF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sch": [
+      187.96,
+      25.4
+    ],
+    "xy": [
+      54.0,
+      12.0
+    ],
+    "angle": 90.0,
+    "mpn": "CL10A105KB8NNNC",
+    "lcsc": "C15849",
+    "assembly": "SMT",
+    "note": "Basic; 0603 X5R 10%; logic decoupling, -55 to +85 C dielectric range.",
+    "uuid": "01f162b1-e4e9-5020-91a9-b8c27ed0beaa"
+  },
+  {
+    "ref": "C3",
+    "symbol": "Device_C",
+    "value": "10uF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0805_2012Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sch": [
+      285.75,
+      50.8
+    ],
+    "xy": [
+      30.0,
+      10.3
+    ],
+    "angle": 90.0,
+    "mpn": "GRM21BR61H106KE43L",
+    "lcsc": "C440198",
+    "assembly": "SMT",
+    "note": "Basic; 0805 X5R 10%; 3.3 V reservoir.",
+    "uuid": "0de2b69a-fc7b-5efc-a4aa-7968d28d2c03"
+  },
+  {
+    "ref": "C4",
+    "symbol": "Device_C",
+    "value": "100nF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sch": [
+      311.15,
+      50.8
+    ],
+    "xy": [
+      30.0,
+      14.0
+    ],
+    "angle": 90.0,
+    "mpn": "CC0603KRX7R9BB104",
+    "lcsc": "C14663",
+    "assembly": "SMT",
+    "note": "Basic; 0603 X7R 10%.",
+    "uuid": "64f82d02-6407-5e82-a917-d756d97f947d"
+  },
+  {
+    "ref": "R5",
+    "symbol": "Device_R",
+    "value": "10k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "MCU_EN"
+    },
+    "sch": [
+      361.95,
+      38.1
+    ],
+    "xy": [
+      30.0,
+      17.5
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1002T5E",
+    "lcsc": "C25804",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "37565785-6bb4-5ae0-a1c7-27c9773c1b20"
+  },
+  {
+    "ref": "C5",
+    "symbol": "Device_C",
+    "value": "1uF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0603_1608Metric",
+    "nets": {
+      "1": "MCU_EN",
+      "2": "GND"
+    },
+    "sch": [
+      387.35,
+      38.1
+    ],
+    "xy": [
+      30.0,
+      21.0
+    ],
+    "angle": 90.0,
+    "mpn": "CL10A105KB8NNNC",
+    "lcsc": "C15849",
+    "assembly": "SMT",
+    "note": "Basic; 0603 X5R 10%; logic decoupling, -55 to +85 C dielectric range.",
+    "uuid": "a15215dc-d78e-5e4f-a2c0-1f0cd717ba45"
+  },
+  {
+    "ref": "R6",
+    "symbol": "Device_R",
+    "value": "10k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "BOOT_N"
+    },
+    "sch": [
+      425.45,
+      38.1
+    ],
+    "xy": [
+      33.0,
+      27.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1002T5E",
+    "lcsc": "C25804",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "5c1ab336-439c-5f5e-bfc1-7e2b8133e3d1"
+  },
+  {
+    "ref": "R7",
+    "symbol": "Device_R",
+    "value": "10k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "STRAP8"
+    },
+    "sch": [
+      450.85,
+      38.1
+    ],
+    "xy": [
+      30.0,
+      24.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1002T5E",
+    "lcsc": "C25804",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "d36cb958-b494-5b2c-8401-fe3a36c300a3"
+  },
+  {
+    "ref": "R8",
+    "symbol": "Device_R",
+    "value": "10k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "STRAP2"
+    },
+    "sch": [
+      476.25,
+      38.1
+    ],
+    "xy": [
+      60.0,
+      8.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1002T5E",
+    "lcsc": "C25804",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "2b00ae42-fdc3-5be7-8609-45ea3f30ab75"
+  },
+  {
+    "ref": "SW1",
+    "symbol": "Switch_SW_Push",
+    "value": "BOOT",
+    "fp": "Wind:Button_Switch_SMD_SW_SPST_TL3342",
+    "nets": {
+      "1": "BOOT_N",
+      "2": "GND"
+    },
+    "sch": [
+      429.26,
+      76.2
+    ],
+    "xy": [
+      38.0,
+      29.0
+    ],
+    "angle": 0.0,
+    "mpn": "TL3342F160QG",
+    "lcsc": "C2886898",
+    "assembly": "SMT",
+    "note": "Original E-Switch SMD switch is stocked; do not use through-hole TL1220 RESET auto-match.",
+    "uuid": "d2ecb78d-4be1-58bd-a79d-a2c8ab36bfb0"
+  },
+  {
+    "ref": "SW2",
+    "symbol": "Switch_SW_Push",
+    "value": "RESET",
+    "fp": "Wind:Button_Switch_SMD_SW_SPST_TL3342",
+    "nets": {
+      "1": "MCU_EN",
+      "2": "GND"
+    },
+    "sch": [
+      368.3,
+      76.2
+    ],
+    "xy": [
+      47.0,
+      29.0
+    ],
+    "angle": 0.0,
+    "mpn": "TL3342F160QG",
+    "lcsc": "C2886898",
+    "assembly": "SMT",
+    "note": "Original E-Switch SMD switch is stocked; do not use through-hole TL1220 RESET auto-match.",
+    "uuid": "616d5244-7a52-5581-9517-92f51635697a"
+  },
+  {
+    "ref": "R9",
+    "symbol": "Device_R",
+    "value": "1k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "STATUS_DRV",
+      "2": "LED_A"
+    },
+    "sch": [
+      516.89,
+      38.1
+    ],
+    "xy": [
+      56.0,
+      29.0
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1001T5E",
+    "lcsc": "C21190",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "46a35821-1b0d-541f-b68c-05f078c0c9d7"
+  },
+  {
+    "ref": "D3",
+    "symbol": "Device_LED",
+    "value": "STATUS GREEN",
+    "fp": "Wind:LED_SMD_LED_0805_2012Metric",
+    "nets": {
+      "1": "GND",
+      "2": "LED_A"
+    },
+    "sch": [
+      516.89,
+      71.12
+    ],
+    "xy": [
+      60.0,
+      32.0
+    ],
+    "angle": 0.0,
+    "mpn": "KT-0805G",
+    "lcsc": "C2297",
+    "assembly": "SMT",
+    "note": "Basic green 0805; pad 1 cathode; brightness at low current requires first-board check",
+    "uuid": "9a53a51e-5b22-532e-a9ab-68b7db5db806"
+  },
+  {
+    "ref": "J1",
+    "symbol": "Connector_Barrel_Jack_Switch",
+    "value": "12V / CENTER +",
+    "fp": "Wind:BarrelJack_XKB_DC-005-5A-2.5",
+    "nets": {
+      "1": "VIN_RAW",
+      "2": null,
+      "3": "GND"
+    },
+    "sch": [
+      30.48,
+      177.8
+    ],
+    "xy": [
+      14.2,
+      15.0
+    ],
+    "angle": -90.0,
+    "mpn": "DC-005-5A-2.5",
+    "lcsc": "C381115",
+    "assembly": "THT",
+    "note": "XKB 5A; 5.5/2.5mm centre-positive plug, 9mm insertion. Pin 1 centre, pin 3 sleeve, pin 2 switched sleeve NC. Bottom-view drawing mirrored to top: pin2 axial -6mm, pin3 axial -3mm / transverse +4.7mm.",
+    "uuid": "53b8d199-5093-51b3-a4ab-e9ceec24e1a4"
+  },
+  {
+    "ref": "F1",
+    "symbol": "Device_Fuse",
+    "value": "3A / 32V",
+    "fp": "Wind:Fuse_Fuse_1206_3216Metric",
+    "nets": {
+      "1": "VIN_RAW",
+      "2": "VIN_FUSED"
+    },
+    "sch": [
+      69.85,
+      177.8
+    ],
+    "xy": [
+      18.0,
+      12.0
+    ],
+    "angle": 0.0,
+    "mpn": "0466003.NRHF",
+    "lcsc": "C14165",
+    "assembly": "SMT",
+    "note": "Littelfuse 466 1206 fast 3A 32V; input backup fuse, not calibrated fan current limiter",
+    "uuid": "30b040f9-8655-55da-9e2c-b3fa99bc68f9"
+  },
+  {
+    "ref": "Q1",
+    "symbol": "Transistor_FET_AO3401A",
+    "value": "AO3401A",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "RP_GATE",
+      "2": "VIN_PROTECTED",
+      "3": "VIN_FUSED"
+    },
+    "sch": [
+      111.76,
+      177.8
+    ],
+    "xy": [
+      21.0,
+      18.0
+    ],
+    "angle": 0.0,
+    "mpn": "AO3401A",
+    "lcsc": "C15127",
+    "assembly": "SMT",
+    "note": "Reverse protection: drain faces input; source faces load",
+    "uuid": "391ed9c1-42f9-5312-bed5-823f91e183af"
+  },
+  {
+    "ref": "R10",
+    "symbol": "Device_R",
+    "value": "4.7k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "RP_GATE",
+      "2": "GND"
+    },
+    "sch": [
+      91.44,
+      214.63
+    ],
+    "xy": [
+      16.0,
+      21.0
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF4701T5E",
+    "lcsc": "C23162",
+    "assembly": "SMT",
+    "note": "Biases 9.1V reverse-FET gate clamp",
+    "uuid": "23fe7e4c-16ed-5c23-8328-1b264740059b"
+  },
+  {
+    "ref": "D1",
+    "symbol": "Device_D_Zener",
+    "value": "BZT52C9V1",
+    "fp": "Wind:Diode_SMD_D_SOD-123",
+    "nets": {
+      "1": "VIN_PROTECTED",
+      "2": "RP_GATE"
+    },
+    "sch": [
+      127,
+      214.63
+    ],
+    "xy": [
+      21.0,
+      22.0
+    ],
+    "angle": 0.0,
+    "mpn": "BZT52C9V1-7-F",
+    "lcsc": "C260913",
+    "assembly": "SMT",
+    "note": "9.1V gate-source clamp; AO3401A absolute Vgs is 12V",
+    "uuid": "01bca101-6fb1-5aa2-8481-8f064b53a7e6"
+  },
+  {
+    "ref": "D2",
+    "symbol": "Device_D_Zener",
+    "value": "SMBJ15A TVS",
+    "fp": "Wind:Diode_SMD_D_SMB",
+    "nets": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "sch": [
+      160.02,
+      177.8
+    ],
+    "xy": [
+      15.0,
+      28.0
+    ],
+    "angle": 90.0,
+    "mpn": "SMBJ15A",
+    "lcsc": "C83846",
+    "assembly": "SMT",
+    "note": "Littelfuse; unidirectional SMB/DO-214AA, 15 V standoff, 24.4 V rated clamp; stocked exact electrical type.",
+    "uuid": "386222ca-82f4-5fbb-a107-ddf1eee7e776"
+  },
+  {
+    "ref": "C6",
+    "symbol": "Device_C_Polarized",
+    "value": "47uF / 50V",
+    "fp": "Wind:Capacitor_THT_CP_Radial_D6.3mm_P2.50mm",
+    "nets": {
+      "1": "VIN_PROTECTED",
+      "2": "GND"
+    },
+    "sch": [
+      194.31,
+      177.8
+    ],
+    "xy": [
+      7.0,
+      26.0
+    ],
+    "angle": 0.0,
+    "mpn": "EEUFR1H470",
+    "lcsc": "C407950",
+    "assembly": "THT",
+    "note": "Panasonic FR: 6.3mm diameter, 11.2mm body, 2.5mm lead spacing",
+    "uuid": "e6ffb7a2-0f40-56e0-8f10-9ba9c754b71f"
+  },
+  {
+    "ref": "FB1",
+    "symbol": "Device_FerriteBead",
+    "value": "120R@100MHz / 3.5A",
+    "fp": "Wind:Inductor_SMD_L_1206_3216Metric",
+    "nets": {
+      "1": "VIN_PROTECTED",
+      "2": "VIN_FILTERED"
+    },
+    "sch": [
+      224.79,
+      177.8
+    ],
+    "xy": [
+      20.5,
+      29.0
+    ],
+    "angle": 0.0,
+    "mpn": "BLM31PG121SN1L",
+    "lcsc": "C85841",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "fbdf7301-8dd6-54f7-a67b-acee2ca099fa"
+  },
+  {
+    "ref": "C7",
+    "symbol": "Device_C",
+    "value": "1uF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0805_2012Metric",
+    "nets": {
+      "1": "VIN_FILTERED",
+      "2": "GND"
+    },
+    "sch": [
+      257.81,
+      177.8
+    ],
+    "xy": [
+      25.5,
+      21.5
+    ],
+    "angle": 0.0,
+    "mpn": "CL21B105KBFNNNE",
+    "lcsc": "C28323",
+    "assembly": "SMT",
+    "note": "Basic; 0805 X7R 50 V 10%.",
+    "uuid": "7c665e6e-6cbb-5edb-9437-985e7942c89c"
+  },
+  {
+    "ref": "U4",
+    "symbol": "TPS25970LRPWR",
+    "value": "TPS25970LRPWR",
+    "fp": "Wind:TPS25970_RPW0010A_2x2mm",
+    "nets": {
+      "1": "EFUSE_EN",
+      "2": "OVLO",
+      "3": null,
+      "4": "FAULT_N",
+      "5": "VIN_FILTERED",
+      "6": "FAN_12V",
+      "7": "DVDT",
+      "8": "GND",
+      "9": "ILM",
+      "10": null
+    },
+    "sch": [
+      334.01,
+      182.88
+    ],
+    "xy": [
+      25.0,
+      29.0
+    ],
+    "angle": 0.0,
+    "mpn": "TPS25970LRPWR",
+    "lcsc": "C3662801",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "5d332061-93ef-5abc-aaf9-e0b6e5dbd478"
+  },
+  {
+    "ref": "R11",
+    "symbol": "Device_R",
+    "value": "97.6k 0.1%",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "VIN_FILTERED",
+      "2": "OVLO"
+    },
+    "sch": [
+      281.94,
+      220.98
+    ],
+    "xy": [
+      21.0,
+      33.0
+    ],
+    "angle": 90.0,
+    "mpn": "RT0603BRE0797K6L",
+    "lcsc": "C862326",
+    "assembly": "SMT",
+    "note": "Stock replacement for C861608 shortfall; 97.6k 0.1%, 50 ppm/C (previously 25 ppm/C). See drift calculation.",
+    "uuid": "b915e2cb-75c5-5a52-9b13-b475eaea291b"
+  },
+  {
+    "ref": "R12",
+    "symbol": "Device_R",
+    "value": "10k 0.1%",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "OVLO",
+      "2": "GND"
+    },
+    "sch": [
+      307.34,
+      220.98
+    ],
+    "xy": [
+      24.0,
+      34.0
+    ],
+    "angle": 90.0,
+    "mpn": "RT0603BRD0710KL",
+    "lcsc": "C95204",
+    "assembly": "SMT",
+    "note": "Retain 10k 0.1%, 25 ppm/C for OVLO divider.",
+    "uuid": "02ed26e6-ae28-51b4-b8f0-4fc4c67dfc09"
+  },
+  {
+    "ref": "R13",
+    "symbol": "Device_R",
+    "value": "2.4k 1%",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "ILM",
+      "2": "GND"
+    },
+    "sch": [
+      393.7,
+      205.74
+    ],
+    "xy": [
+      30.0,
+      29.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF2401T5E",
+    "lcsc": "C22940",
+    "assembly": "SMT",
+    "note": "Basic ILIM resistor: nominal 2.395 A; 1%, 100 ppm/C",
+    "uuid": "d08a7ea2-04cd-5472-80c2-a65820ec50b6"
+  },
+  {
+    "ref": "C8",
+    "symbol": "Device_C",
+    "value": "100nF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0603_1608Metric",
+    "nets": {
+      "1": "DVDT_CAP",
+      "2": "GND"
+    },
+    "sch": [
+      337.82,
+      236.22
+    ],
+    "xy": [
+      29.0,
+      33.0
+    ],
+    "angle": 90.0,
+    "mpn": "CC0603KRX7R9BB104",
+    "lcsc": "C14663",
+    "assembly": "SMT",
+    "note": "100 nF X7R; ~0.36 s nominal 12 V slew; firmware waits 750 ms with PWM stopped",
+    "uuid": "85b56143-f870-5a2f-becf-61023b53838a"
+  },
+  {
+    "ref": "R14",
+    "symbol": "Device_R",
+    "value": "1k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "FAN_ENABLE",
+      "2": "EFUSE_EN"
+    },
+    "sch": [
+      358.14,
+      133.35
+    ],
+    "xy": [
+      26.5,
+      25.0
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1001T5E",
+    "lcsc": "C21190",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "a9d5f0aa-80e6-567d-b6c5-fe15356f7af2"
+  },
+  {
+    "ref": "R15",
+    "symbol": "Device_R",
+    "value": "10k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "EFUSE_EN",
+      "2": "GND"
+    },
+    "sch": [
+      388.62,
+      133.35
+    ],
+    "xy": [
+      21.0,
+      25.0
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1002T5E",
+    "lcsc": "C25804",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "8e8f35f2-46c0-5f0b-a96d-8f875485db0b"
+  },
+  {
+    "ref": "C11",
+    "symbol": "Device_C",
+    "value": "100nF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0603_1608Metric",
+    "nets": {
+      "1": "EFUSE_EN",
+      "2": "GND"
+    },
+    "sch": [
+      419.1,
+      133.35
+    ],
+    "xy": [
+      19.0,
+      35.5
+    ],
+    "angle": 0.0,
+    "mpn": "CC0603KRX7R9BB104",
+    "lcsc": "C14663",
+    "assembly": "SMT",
+    "note": "Basic; 0603 X7R 10%.",
+    "uuid": "d5898224-bfb9-5f7c-99e1-7ff42a4eb0a3"
+  },
+  {
+    "ref": "C9",
+    "symbol": "Device_C_Polarized",
+    "value": "470uF / 25V",
+    "fp": "Wind:Capacitor_THT_CP_Radial_D10.0mm_P5.00mm",
+    "nets": {
+      "1": "FAN_12V",
+      "2": "GND"
+    },
+    "sch": [
+      438.15,
+      177.8
+    ],
+    "xy": [
+      6.0,
+      36.0
+    ],
+    "angle": 0.0,
+    "mpn": "EEUFR1E471",
+    "lcsc": "C407944",
+    "assembly": "THT",
+    "note": "Panasonic FR 470uF 25V: D10 x H12.5mm, pitch 5mm; impedance 43mohm, ripple 1.29A at 100kHz; same capacitance and voltage.",
+    "uuid": "61579657-be4b-546e-b664-5d63f1938239"
+  },
+  {
+    "ref": "C10",
+    "symbol": "Device_C",
+    "value": "1uF / 50V",
+    "fp": "Wind:Capacitor_SMD_C_0805_2012Metric",
+    "nets": {
+      "1": "FAN_12V",
+      "2": "GND"
+    },
+    "sch": [
+      468.63,
+      177.8
+    ],
+    "xy": [
+      26.5,
+      36.5
+    ],
+    "angle": 0.0,
+    "mpn": "CL21B105KBFNNNE",
+    "lcsc": "C28323",
+    "assembly": "SMT",
+    "note": "Basic; 0805 X7R 50 V 10%.",
+    "uuid": "51252e39-b720-521d-ba89-f0bc25f51964"
+  },
+  {
+    "ref": "R16",
+    "symbol": "Device_R",
+    "value": "4.7k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "FAN_12V",
+      "2": "GND"
+    },
+    "sch": [
+      501.65,
+      177.8
+    ],
+    "xy": [
+      30.0,
+      38.5
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF4701T5E",
+    "lcsc": "C23162",
+    "assembly": "SMT",
+    "note": "Output discharge: ~2.2 s RC with 470uF, not an instantaneous discharge",
+    "uuid": "394dd5aa-ee0e-5647-b4bd-172ebbfd7fb6"
+  },
+  {
+    "ref": "R17",
+    "symbol": "Device_R",
+    "value": "10k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "FAULT_N"
+    },
+    "sch": [
+      414.02,
+      236.22
+    ],
+    "xy": [
+      32.0,
+      34.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1002T5E",
+    "lcsc": "C25804",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "936f1bc8-925e-5393-8d14-d1bc1fb32a24"
+  },
+  {
+    "ref": "D4",
+    "symbol": "Device_LED",
+    "value": "FAULT RED",
+    "fp": "Wind:LED_SMD_LED_0603_1608Metric",
+    "nets": {
+      "1": "FAULT_N",
+      "2": "FAULT_LED_A"
+    },
+    "sch": [
+      485.14,
+      238.76
+    ],
+    "xy": [
+      36.0,
+      34.0
+    ],
+    "angle": 0.0,
+    "mpn": "KT-0603R",
+    "lcsc": "C2286",
+    "assembly": "SMT",
+    "note": "KENTO Basic red 0603; replaces Extended LED to avoid one feeder fee. Preserve pad 1 cathode.",
+    "uuid": "1fc58dec-3f47-5a48-a78d-585eb9a5be3c"
+  },
+  {
+    "ref": "R18",
+    "symbol": "Device_R",
+    "value": "2.2k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "FAULT_LED_A"
+    },
+    "sch": [
+      458.47,
+      236.22
+    ],
+    "xy": [
+      36.0,
+      37.0
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF2201T5E",
+    "lcsc": "C4190",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "6985d666-552a-59b5-8019-d07c7ba5a201"
+  },
+  {
+    "ref": "J3",
+    "symbol": "Connector_Generic_Conn_01x04",
+    "value": "L1",
+    "fp": "Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "2": "FAN_12V",
+      "3": "TACH_L1_RAW",
+      "4": "PWM_L1"
+    },
+    "sch": [
+      107.94999999999999,
+      320.04
+    ],
+    "xy": [
+      6.0,
+      53.0
+    ],
+    "angle": 0.0,
+    "mpn": "470531000",
+    "lcsc": "C240840",
+    "assembly": "THT",
+    "note": "Genuine Molex 47053-1000, natural white, factory wave soldering; exact existing keyed fan footprint.",
+    "uuid": "969bd2dd-ed60-5f03-8dbd-7a0368a0eada"
+  },
+  {
+    "ref": "Q2",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "PWM_L1_GATE",
+      "2": "GND",
+      "3": "PWM_L1"
+    },
+    "sch": [
+      57.14999999999999,
+      325.12
+    ],
+    "xy": [
+      13.0,
+      45.5
+    ],
+    "angle": 0.0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "MCC exact part; G1/S2/D3; RDS(on) specified at VGS=1.8 V",
+    "uuid": "afd3e248-a58f-51da-bfa7-6898d17019d8"
+  },
+  {
+    "ref": "R20",
+    "symbol": "Device_R",
+    "value": "100",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_L1_DRV",
+      "2": "PWM_L1_GATE"
+    },
+    "sch": [
+      19.049999999999997,
+      320.04
+    ],
+    "xy": [
+      9.0,
+      43.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1000T5E",
+    "lcsc": "C22775",
+    "assembly": "SMT",
+    "note": "Basic; 100 ohm 0603 1%, 100 mW.",
+    "uuid": "d0fa24be-4373-5fbc-bfa3-18ad3f8545bc"
+  },
+  {
+    "ref": "R21",
+    "symbol": "Device_R",
+    "value": "100k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_L1_GATE",
+      "2": "GND"
+    },
+    "sch": [
+      57.14999999999999,
+      358.14
+    ],
+    "xy": [
+      8.5,
+      47.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1003T5E",
+    "lcsc": "C25803",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "25cb26c9-2f47-5420-bba2-366f381b246a"
+  },
+  {
+    "ref": "R22",
+    "symbol": "Device_R",
+    "value": "2.2k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "TACH_L1",
+      "2": "+3V3"
+    },
+    "sch": [
+      123.19,
+      358.14
+    ],
+    "xy": [
+      18,
+      44.4
+    ],
+    "angle": 90,
+    "mpn": "0603WAF2201T5E",
+    "lcsc": "C4190",
+    "assembly": "SMT",
+    "note": "MCU-side tach pull-up; Q6-Q9 separate raw fan voltage",
+    "uuid": "e8eed6cf-718b-5aa8-94f9-06eab0a36095"
+  },
+  {
+    "ref": "J4",
+    "symbol": "Connector_Generic_Conn_01x04",
+    "value": "L2",
+    "fp": "Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "2": "FAN_12V",
+      "3": "TACH_L2_RAW",
+      "4": "PWM_L2"
+    },
+    "sch": [
+      240.03,
+      320.04
+    ],
+    "xy": [
+      21.0,
+      53.0
+    ],
+    "angle": 0.0,
+    "mpn": "470531000",
+    "lcsc": "C240840",
+    "assembly": "THT",
+    "note": "Genuine Molex 47053-1000, natural white, factory wave soldering; exact existing keyed fan footprint.",
+    "uuid": "22b26611-58d3-5e83-b2fb-6525441d3910"
+  },
+  {
+    "ref": "Q3",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "PWM_L2_GATE",
+      "2": "GND",
+      "3": "PWM_L2"
+    },
+    "sch": [
+      189.23000000000002,
+      325.12
+    ],
+    "xy": [
+      28.0,
+      45.5
+    ],
+    "angle": 0.0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "MCC exact part; G1/S2/D3; RDS(on) specified at VGS=1.8 V",
+    "uuid": "f0d2a7a0-e92a-5a14-bc48-d6daabd73d4d"
+  },
+  {
+    "ref": "R25",
+    "symbol": "Device_R",
+    "value": "100",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_L2_DRV",
+      "2": "PWM_L2_GATE"
+    },
+    "sch": [
+      151.13,
+      320.04
+    ],
+    "xy": [
+      24.0,
+      43.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1000T5E",
+    "lcsc": "C22775",
+    "assembly": "SMT",
+    "note": "Basic; 100 ohm 0603 1%, 100 mW.",
+    "uuid": "1ddd9c02-2d7c-5dc1-8677-f9a5848430a3"
+  },
+  {
+    "ref": "R26",
+    "symbol": "Device_R",
+    "value": "100k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_L2_GATE",
+      "2": "GND"
+    },
+    "sch": [
+      189.23000000000002,
+      358.14
+    ],
+    "xy": [
+      23.5,
+      47.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1003T5E",
+    "lcsc": "C25803",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "653add0b-ed9c-55a9-9f2c-c935d03c0858"
+  },
+  {
+    "ref": "R27",
+    "symbol": "Device_R",
+    "value": "2.2k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "TACH_L2",
+      "2": "+3V3"
+    },
+    "sch": [
+      255.27,
+      358.14
+    ],
+    "xy": [
+      33,
+      44.4
+    ],
+    "angle": 90,
+    "mpn": "0603WAF2201T5E",
+    "lcsc": "C4190",
+    "assembly": "SMT",
+    "note": "MCU-side tach pull-up; Q6-Q9 separate raw fan voltage",
+    "uuid": "4a3e05d2-a2c7-56c1-b5bb-5ccf9ce97473"
+  },
+  {
+    "ref": "J5",
+    "symbol": "Connector_Generic_Conn_01x04",
+    "value": "R1",
+    "fp": "Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "2": "FAN_12V",
+      "3": "TACH_R1_RAW",
+      "4": "PWM_R1"
+    },
+    "sch": [
+      372.11,
+      320.04
+    ],
+    "xy": [
+      36.0,
+      53.0
+    ],
+    "angle": 0.0,
+    "mpn": "470531000",
+    "lcsc": "C240840",
+    "assembly": "THT",
+    "note": "Genuine Molex 47053-1000, natural white, factory wave soldering; exact existing keyed fan footprint.",
+    "uuid": "31bba08c-1bea-5cd8-82f4-fd32e14c76da"
+  },
+  {
+    "ref": "Q4",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "PWM_R1_GATE",
+      "2": "GND",
+      "3": "PWM_R1"
+    },
+    "sch": [
+      321.31,
+      325.12
+    ],
+    "xy": [
+      43.0,
+      45.5
+    ],
+    "angle": 0.0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "MCC exact part; G1/S2/D3; RDS(on) specified at VGS=1.8 V",
+    "uuid": "6765152e-43d7-501f-9a8f-164b263dfb61"
+  },
+  {
+    "ref": "R30",
+    "symbol": "Device_R",
+    "value": "100",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_R1_DRV",
+      "2": "PWM_R1_GATE"
+    },
+    "sch": [
+      283.21,
+      320.04
+    ],
+    "xy": [
+      39.0,
+      43.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1000T5E",
+    "lcsc": "C22775",
+    "assembly": "SMT",
+    "note": "Basic; 100 ohm 0603 1%, 100 mW.",
+    "uuid": "d01bc38e-6183-529d-8d97-3a7be1b01e6c"
+  },
+  {
+    "ref": "R31",
+    "symbol": "Device_R",
+    "value": "100k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_R1_GATE",
+      "2": "GND"
+    },
+    "sch": [
+      321.31,
+      358.14
+    ],
+    "xy": [
+      38.5,
+      47.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1003T5E",
+    "lcsc": "C25803",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "db235dfc-8be6-5a56-9e29-d31bd7ba1ea6"
+  },
+  {
+    "ref": "R32",
+    "symbol": "Device_R",
+    "value": "2.2k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "TACH_R1",
+      "2": "+3V3"
+    },
+    "sch": [
+      387.35,
+      358.14
+    ],
+    "xy": [
+      48,
+      44.4
+    ],
+    "angle": 90,
+    "mpn": "0603WAF2201T5E",
+    "lcsc": "C4190",
+    "assembly": "SMT",
+    "note": "MCU-side tach pull-up; Q6-Q9 separate raw fan voltage",
+    "uuid": "298a556a-a9d1-5940-9dad-ecab139c1075"
+  },
+  {
+    "ref": "J6",
+    "symbol": "Connector_Generic_Conn_01x04",
+    "value": "R2",
+    "fp": "Wind:Connector_FanPinHeader_1x04_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "2": "FAN_12V",
+      "3": "TACH_R2_RAW",
+      "4": "PWM_R2"
+    },
+    "sch": [
+      504.19000000000005,
+      320.04
+    ],
+    "xy": [
+      51.0,
+      53.0
+    ],
+    "angle": 0.0,
+    "mpn": "470531000",
+    "lcsc": "C240840",
+    "assembly": "THT",
+    "note": "Genuine Molex 47053-1000, natural white, factory wave soldering; exact existing keyed fan footprint.",
+    "uuid": "8d35eb83-ce8a-51b0-929e-73a9af1d28d9"
+  },
+  {
+    "ref": "Q5",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "PWM_R2_GATE",
+      "2": "GND",
+      "3": "PWM_R2"
+    },
+    "sch": [
+      453.39000000000004,
+      325.12
+    ],
+    "xy": [
+      58.0,
+      45.5
+    ],
+    "angle": 0.0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "MCC exact part; G1/S2/D3; RDS(on) specified at VGS=1.8 V",
+    "uuid": "74a40c1d-27ca-5084-bdf9-8f990bf5eaf8"
+  },
+  {
+    "ref": "R35",
+    "symbol": "Device_R",
+    "value": "100",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_R2_DRV",
+      "2": "PWM_R2_GATE"
+    },
+    "sch": [
+      415.29,
+      320.04
+    ],
+    "xy": [
+      54.0,
+      43.5
+    ],
+    "angle": 0.0,
+    "mpn": "0603WAF1000T5E",
+    "lcsc": "C22775",
+    "assembly": "SMT",
+    "note": "Basic; 100 ohm 0603 1%, 100 mW.",
+    "uuid": "2944fd25-d05d-5994-8991-a2a75ac8e2fe"
+  },
+  {
+    "ref": "R36",
+    "symbol": "Device_R",
+    "value": "100k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "PWM_R2_GATE",
+      "2": "GND"
+    },
+    "sch": [
+      453.39000000000004,
+      358.14
+    ],
+    "xy": [
+      53.5,
+      47.0
+    ],
+    "angle": 90.0,
+    "mpn": "0603WAF1003T5E",
+    "lcsc": "C25803",
+    "assembly": "SMT",
+    "note": "",
+    "uuid": "3b0f32e0-f3cb-5e7c-b6e4-ce6e8c0526e7"
+  },
+  {
+    "ref": "R37",
+    "symbol": "Device_R",
+    "value": "2.2k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "TACH_R2",
+      "2": "+3V3"
+    },
+    "sch": [
+      519.4300000000001,
+      358.14
+    ],
+    "xy": [
+      63,
+      44.4
+    ],
+    "angle": 90,
+    "mpn": "0603WAF2201T5E",
+    "lcsc": "C4190",
+    "assembly": "SMT",
+    "note": "MCU-side tach pull-up; Q6-Q9 separate raw fan voltage",
+    "uuid": "607ea8c3-eef0-5ca8-accc-1668e8bae8b5"
+  },
+  {
+    "ref": "TP1",
+    "symbol": "Connector_TestPoint",
+    "value": "GND",
+    "fp": "Wind:TestPoint_TestPoint_Pad_D1.5mm",
+    "nets": {
+      "1": "GND"
+    },
+    "sch": [
+      541.0200000000001,
+      210.82
+    ],
+    "xy": [
+      65.0,
+      34.0
+    ],
+    "angle": 0.0,
+    "mpn": "PCB test point",
+    "lcsc": "",
+    "assembly": "PCB",
+    "note": "",
+    "uuid": "1c8e28a1-1a3f-5b46-998d-64138bec2791"
+  },
+  {
+    "ref": "TP2",
+    "symbol": "Connector_TestPoint",
+    "value": "+3V3",
+    "fp": "Wind:TestPoint_TestPoint_Pad_D1.5mm",
+    "nets": {
+      "1": "+3V3"
+    },
+    "sch": [
+      561.34,
+      210.82
+    ],
+    "xy": [
+      65.0,
+      37.5
+    ],
+    "angle": 0.0,
+    "mpn": "PCB test point",
+    "lcsc": "",
+    "assembly": "PCB",
+    "note": "",
+    "uuid": "402b541e-489b-53f7-acb1-0f42cebca13f"
+  },
+  {
+    "ref": "TP3",
+    "symbol": "Connector_TestPoint",
+    "value": "FAN_12V",
+    "fp": "Wind:TestPoint_TestPoint_Pad_D1.5mm",
+    "nets": {
+      "1": "FAN_12V"
+    },
+    "sch": [
+      520.7,
+      233.68
+    ],
+    "xy": [
+      65.0,
+      41.0
+    ],
+    "angle": 0.0,
+    "mpn": "PCB test point",
+    "lcsc": "",
+    "assembly": "PCB",
+    "note": "",
+    "uuid": "ec645d25-7430-52ba-8e24-bb679a60be74"
+  },
+  {
+    "ref": "TP4",
+    "symbol": "Connector_TestPoint",
+    "value": "VIN_FILTERED",
+    "fp": "Wind:TestPoint_TestPoint_Pad_D1.5mm",
+    "nets": {
+      "1": "VIN_FILTERED"
+    },
+    "sch": [
+      541.0200000000001,
+      233.68
+    ],
+    "xy": [
+      20.0,
+      40.3
+    ],
+    "angle": 0.0,
+    "mpn": "PCB test point",
+    "lcsc": "",
+    "assembly": "PCB",
+    "note": "",
+    "uuid": "b8c1d862-24dd-568c-973d-cebd892a427d"
+  },
+  {
+    "ref": "TP5",
+    "symbol": "Connector_TestPoint",
+    "value": "FAULT_N",
+    "fp": "Wind:TestPoint_TestPoint_Pad_D1.5mm",
+    "nets": {
+      "1": "FAULT_N"
+    },
+    "sch": [
+      561.34,
+      233.68
+    ],
+    "xy": [
+      46.5,
+      34.5
+    ],
+    "angle": 0.0,
+    "mpn": "PCB test point",
+    "lcsc": "",
+    "assembly": "PCB",
+    "note": "",
+    "uuid": "f1dfa84a-49a4-5644-9ba2-198d2686edba"
+  },
+  {
+    "ref": "TP6",
+    "symbol": "Connector_TestPoint",
+    "value": "EFUSE_EN",
+    "fp": "Wind:TestPoint_TestPoint_Pad_D1.5mm",
+    "nets": {
+      "1": "EFUSE_EN"
+    },
+    "sch": [
+      520.7,
+      256.53999999999996
+    ],
+    "xy": [
+      32.0,
+      37.5
+    ],
+    "angle": 0.0,
+    "mpn": "PCB test point",
+    "lcsc": "",
+    "assembly": "PCB",
+    "note": "",
+    "uuid": "6c98effc-3222-57ea-bfdb-6cbd2b9bb947"
+  },
+  {
+    "ref": "Q6",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "+3V3",
+      "2": "TACH_L1",
+      "3": "TACH_L1_RAW"
+    },
+    "sch": [
+      87.63,
+      358.14
+    ],
+    "xy": [
+      18,
+      47.8
+    ],
+    "angle": 0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "Common-gate tach level shifter: gate 3V3, source MCU, drain fan; body diode points MCU to fan",
+    "uuid": "d567840e-63e2-522b-b2da-2f306008d98e"
+  },
+  {
+    "ref": "Q7",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "+3V3",
+      "2": "TACH_L2",
+      "3": "TACH_L2_RAW"
+    },
+    "sch": [
+      219.71,
+      358.14
+    ],
+    "xy": [
+      33,
+      47.8
+    ],
+    "angle": 0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "Common-gate tach level shifter: gate 3V3, source MCU, drain fan; body diode points MCU to fan",
+    "uuid": "d630a992-09c3-53a1-be65-afe1eccaa433"
+  },
+  {
+    "ref": "Q8",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "+3V3",
+      "2": "TACH_R1",
+      "3": "TACH_R1_RAW"
+    },
+    "sch": [
+      351.79,
+      358.14
+    ],
+    "xy": [
+      48,
+      47.8
+    ],
+    "angle": 0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "Common-gate tach level shifter: gate 3V3, source MCU, drain fan; body diode points MCU to fan",
+    "uuid": "de4d559a-32d9-5c93-baa0-2068cde236ed"
+  },
+  {
+    "ref": "Q9",
+    "symbol": "SI2312",
+    "value": "SI2312-TP",
+    "fp": "Wind:Package_TO_SOT_SMD_SOT-23",
+    "nets": {
+      "1": "+3V3",
+      "2": "TACH_R2",
+      "3": "TACH_R2_RAW"
+    },
+    "sch": [
+      483.87,
+      358.14
+    ],
+    "xy": [
+      63,
+      47.8
+    ],
+    "angle": 0,
+    "mpn": "SI2312-TP",
+    "lcsc": "C6488168",
+    "assembly": "SMT",
+    "note": "Common-gate tach level shifter: gate 3V3, source MCU, drain fan; body diode points MCU to fan",
+    "uuid": "4b8db188-d653-5a97-a3ab-de658e39e70c"
+  },
+  {
+    "ref": "R19",
+    "symbol": "Device_R",
+    "value": "1k",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "+3V3",
+      "2": "GND"
+    },
+    "sch": [
+      213.36,
+      25.4
+    ],
+    "xy": [
+      60,
+      5
+    ],
+    "angle": 0,
+    "mpn": "0603WAF1001T5E",
+    "lcsc": "C21190",
+    "assembly": "SMT",
+    "note": "3.3 mA logic-rail bleed; finite load during USB removal and tach leakage",
+    "uuid": "5494e078-113d-59cc-9966-1597d96f6eab"
+  },
+  {
+    "ref": "R40",
+    "symbol": "Device_R",
+    "value": "100",
+    "fp": "Wind:Resistor_SMD_R_0603_1608Metric",
+    "nets": {
+      "1": "DVDT",
+      "2": "DVDT_CAP"
+    },
+    "sch": [
+      365.76,
+      236.22
+    ],
+    "xy": [
+      31.5,
+      31.3
+    ],
+    "angle": 0,
+    "mpn": "0603WAF1000T5E",
+    "lcsc": "C22775",
+    "assembly": "SMT",
+    "note": "TI 100 ohm series damping for C8 > 10 nF",
+    "uuid": "bd3a021b-e297-5206-b557-7b4c6528352e"
+  }
+]

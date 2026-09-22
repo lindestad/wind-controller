@@ -4,3 +4,8 @@
 /tests/.build/
 __pycache__/
 *.pyc
+/hardware/tools/vendor/
+*.kicad_prl
+*.kicad_pcb.lck
+*.kicad_sch.lck
+*-backups/

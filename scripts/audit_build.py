@@ -10,7 +10,7 @@ import sys
 
 p=argparse.ArgumentParser()
 p.add_argument('--workspace',type=Path,required=True)
-p.add_argument('--hardware',type=Path,default=Path.home()/'KiCad/windpcb-revb')
+p.add_argument('--hardware',type=Path,default=Path(__file__).resolve().parents[1]/'hardware')
 a=p.parse_args()
 root=Path(__file__).resolve().parents[1]; z=a.workspace/'zephyr'; b=root/'build/zephyr'
 sys.path.insert(0,str(z/'scripts/dts/python-devicetree/src'))
